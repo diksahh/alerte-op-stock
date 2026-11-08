@@ -1,0 +1,33 @@
+# Sets surveillés (OP-01 à OP-18)
+sets:
+  min: 1
+  max: 18
+
+# Types de produits : display, booster, tin
+types: [display, booster, tin]
+
+# Langues acceptées (les produits JP/CN/KR sont toujours exclus)
+langues: [fr, en]
+
+# Alerter aussi quand le titre ne précise pas la langue (fréquent en boutique anglaise)
+langue_inconnue: true
+
+# --- Méthode 1 : boutiques Shopify (la plus fiable) ---
+# Test : ouvre https://laboutique.fr/products.json dans Safari.
+# Si tu vois du texte avec "products", c'est du Shopify -> ajoute-la ici.
+# Astuce : mets l'URL de la collection One Piece si elle existe, c'est plus rapide :
+#   https://laboutique.fr/collections/one-piece
+boutiques_shopify:
+  - nom: "Boutique exemple"
+    url: "https://exemple-boutique.fr/collections/one-piece"
+    devise: "€"
+
+# --- Méthode 2 : pages produit d'autres boutiques ---
+# Une entrée par fiche produit. Le script cherche le texte de rupture dans la page.
+# Si possible, utilise plutôt texte_dispo (texte présent UNIQUEMENT quand c'est en stock).
+pages:
+  - nom: "Display OP-16 FR - Boutique X"
+    url: "https://exemple.fr/display-op16-fr"
+    type: display
+    texte_rupture: ["Rupture de stock", "Épuisé"]
+    # texte_dispo: ["En stock"]
