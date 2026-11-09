@@ -41,9 +41,10 @@ MODELES_RECHERCHE = [
 ]
 
 RE_EXCLU = re.compile(
-    r"\b(jp|jpn|jap|japonais|japanese|japanisch|japan|chinois|chinese|chn|cn|"
-    r"cor[ée]en|coreen|korean|kr|sleeves?|prot[èe]ge|playmat|tapis|classeur|binder|"
-    r"starter|single|figurine|calendrier|portfolio|toploader)\b", re.I)
+    r"\b(jp|jpn|jap|vj|japon\w*|japan\w*|chinois\w*|chinese|chine|chn|cn|"
+    r"cor[ée]en\w*|coreen\w*|cor[ée]e|korea\w*|kr|asiati\w*|thai\w*|"
+    r"sleeves?|prot[èe]ge\w*|playmat|tapis|classeur|binder|"
+    r"starter|single|figurine|calendrier|portfolio|toploader)\b|日本|中文|한국", re.I)
 
 # Ordre important : tin et display sont testés avant booster
 TYPES = {
@@ -139,9 +140,17 @@ def via_shopify(s, b, recherches):
             if not info:
                 continue
             variantes = p.get("variants") or []
-            dispo = any(v.get("available") for v in variantes)
-            prix = next((v.get("price") for v in variantes if v.get("available")),
-                        variantes[0].get("price") if variantes else None)
+            # une fiche peut proposer plusieurs langues : on ne garde que les variantes FR/EN
+            bonnes = [v for v in variantes if not RE_EXCLU.search(str(v.get("title") or ""))]
+            if variantes and not bonnes:
+                continue
+            if info["langue"] == "?":
+                noms_var = " ".join(str(v.get("title") or "") for v in bonnes)
+                info["langue"] = "fr" if RE_FR.search(noms_var) else \
+                                 "en" if RE_EN.search(noms_var) else "?"
+            dispo = any(v.get("available") for v in bonnes)
+            prix = next((v.get("price") for v in bonnes if v.get("available")),
+                        bonnes[0].get("price") if bonnes else None)
             lien = f"{base}/products/{p['handle']}"
             out.append(produit(b, lien, titre, dispo, prix, b.get("devise", "€"), info))
         if len(prods) < 250:
@@ -204,7 +213,8 @@ def extraire_candidats(page_html, page_url, recherches):
         if urlparse(url).netloc != domaine:
             continue
         t = RE_TITLE_ATTR.search(attrs)
-        txt = htmlmod.unescape(" ".join(re.sub(r"<[^>]+>", " ", interieur).split()))
+        alts = " ".join(re.findall(r"alt\s*=\s*[\"']([^\"']+)[\"']", interieur, re.I))
+        txt = htmlmod.unescape(" ".join(re.sub(r"<[^>]+>", " ", interieur).split()) + " " + alts)
         textes.setdefault(url, []).append(txt + " " + (htmlmod.unescape(t.group(1)) if t else ""))
     candidats = {}
     for url, morceaux in textes.items():
@@ -299,15 +309,31 @@ def lire_fiche(s, url, b):
     return dispo, pre, titre, prix
 
 
+def titre_page(h, taille):
+    m = re.search(r"<title[^>]*>(.*?)</title>", h, re.S | re.I)
+    t = htmlmod.unescape(" ".join(m.group(1).split()))[:60] if m else "sans titre"
+    return f"page « {t} », {taille // 1000} ko"
+
+
 def via_html(s, b, recherches, memo):
     candidats = {}
     if b.get("pages"):
+        lues, erreur = 0, None
         for page in b["pages"]:
-            r = s.get(page, timeout=TIMEOUT)
-            if r.status_code != 200:
-                raise PasCeType(f"HTTP {r.status_code}")
-            candidats.update(extraire_candidats(r.text, r.url, recherches))
+            try:
+                r = s.get(page, timeout=TIMEOUT)
+            except requests.RequestException as e:
+                erreur = e.__class__.__name__
+                continue
             time.sleep(PAUSE)
+            if r.status_code != 200:  # page absente (ex. page 3 qui n'existe pas) : on passe
+                erreur = f"HTTP {r.status_code} sur {page}"
+                continue
+            lues += 1
+            memo["diag"] = titre_page(r.text, len(r.text))
+            candidats.update(extraire_candidats(r.text, r.url, recherches))
+        if not lues:
+            raise PasCeType(erreur or "aucune page lisible")
     else:
         base = b["url"].rstrip("/")
         prefere = memo.get("modele")
@@ -352,6 +378,7 @@ def via_html(s, b, recherches, memo):
 
 # ---------------------------------------------------------------- une boutique
 def scanner(b, recherches, memo):
+    memo.pop("diag", None)
     s = requests.Session()
     s.headers.update(UA)
     ordre = ["shopify", "woo", "html"]
@@ -404,15 +431,17 @@ def envoyer(texte):
         print("Erreur Telegram :", r.text)
 
 
-def rapport(resultats):
+def rapport(resultats, memos=None):
     lignes = ["📋 Rapport boutiques"]
-    for res in resultats:
+    for i, res in enumerate(resultats):
         if res["erreur"]:
             lignes.append(f"❌ {res['nom']} : bloqué ou injoignable ({res['erreur']})")
             continue
         prods = res["produits"]
         if not prods:
-            lignes.append(f"⚪ {res['nom']} [{res['methode']}] : aucun produit trouvé")
+            diag = (memos[i].get("diag") if memos else None)
+            lignes.append(f"⚪ {res['nom']} [{res['methode']}] : aucun produit trouvé"
+                          + (f" ({diag})" if diag else ""))
             continue
         en_stock = sum(1 for p in prods if p["dispo"])
         inconnus = sum(1 for p in prods if p["dispo"] is None)
@@ -421,6 +450,34 @@ def rapport(resultats):
             ligne += f", {inconnus} stock illisible"
         lignes.append(ligne)
     return "\n".join(lignes)
+
+
+def liste_stock(resultats):
+    """Liste de tout ce qui est en stock maintenant, découpée en messages Telegram."""
+    blocs = []
+    for res in resultats:
+        dispo = sorted((p for p in res["produits"] if p["dispo"]), key=lambda p: (p["set"], p["type"]))
+        if not dispo:
+            continue
+        lignes = [f"🏪 {res['nom']} ({len(dispo)})"]
+        for p in dispo:
+            langue = p["langue"].upper() if p["langue"] != "?" else "❔ langue non précisée"
+            prix = f" · {p['prix']} {p['devise']}".rstrip() if p["prix"] else ""
+            pre = " · 🕒 précommande" if p["precommande"] else ""
+            lignes.append(f"• {p['set']} {p['type']} {langue}{prix}{pre}\n  {p['lien']}")
+        blocs.append("\n".join(lignes))
+    if not blocs:
+        return ["📦 Stock actuel : rien de disponible en FR/EN pour l'instant."]
+    messages, courant = [], "📦 Stock actuel (FR/EN)"
+    for bloc in blocs:
+        for ligne in bloc.split("\n• "):
+            morceau = ligne if ligne.startswith("🏪") else "• " + ligne
+            if len(courant) + len(morceau) + 2 > 3800:
+                messages.append(courant)
+                courant = ""
+            courant += ("\n\n" if morceau.startswith("🏪") else "\n") + morceau
+    messages.append(courant.strip())
+    return messages
 
 
 # ---------------------------------------------------------------- programme principal
@@ -439,6 +496,9 @@ def main():
         etat = {"produits": {}, "methodes": {}, "boutiques_vues": []}
     etat.setdefault("methodes", {})
     etat.setdefault("boutiques_vues", [])
+    if "recherches_vues" not in etat:  # première fois avec ce réglage : on considère tout connu
+        etat["recherches_vues"] = [r["nom"] for r in recherches]
+    nouvelles_recherches = {r["nom"] for r in recherches} - set(etat["recherches_vues"])
     premier_lancement = not etat["produits"]
 
     boutiques = cfg.get("boutiques") or []
@@ -454,20 +514,26 @@ def main():
             if p["dispo"] is None:
                 continue
             avant = etat["produits"].get(p["cle"])
-            if p["dispo"] and avant is not True and not premier_lancement and not nouvelle_boutique:
+            if (p["dispo"] and avant is not True and not premier_lancement
+                    and not nouvelle_boutique and p["jeu"] not in nouvelles_recherches):
                 alertes.append(p)
             etat["produits"][p["cle"]] = p["dispo"]
         if not res["erreur"] and res["nom"] not in etat["boutiques_vues"]:
             etat["boutiques_vues"].append(res["nom"])
 
+    etat["recherches_vues"] = sorted(set(etat["recherches_vues"]) | {r["nom"] for r in recherches})
+
     if premier_lancement or os.environ.get("RAPPORT") == "1":
-        envoyer(rapport(resultats))
+        envoyer(rapport(resultats, memos))
+    if os.environ.get("RAPPORT") == "1":
+        for m in liste_stock(resultats):
+            envoyer(m)
     for p in alertes:
         envoyer(message(p))
 
     with open(FICHIER_ETAT, "w", encoding="utf-8") as f:
         json.dump(etat, f, ensure_ascii=False, indent=1, sort_keys=True)
-    print(rapport(resultats))
+    print(rapport(resultats, memos))
     print(f"{len(alertes)} alerte(s) envoyée(s)")
 
 
