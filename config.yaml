@@ -1,33 +1,71 @@
-# Sets surveillés (OP-01 à OP-18)
-sets:
-  min: 1
-  max: 18
+# ============================================================
+#  Ce qu'on cherche
+#  (pour ajouter Pokémon plus tard, on ajoutera un 2e bloc ici)
+# ============================================================
+recherches:
+  - nom: One Piece
+    requete: "one piece"                         # mot-clé tapé dans la recherche des boutiques
+    motif_set: '\bOP\s?[-_]?\s?0?(\d{1,2})\b'    # reconnaît OP-16, OP16, OP 16...
+    prefixe: OP
+    min: 1                                       # OP-01
+    max: 18                                      # OP-18
+    types: [display, booster, tin]
+    langues: [fr, en]
+    langue_inconnue: true                        # alerter aussi si la langue n'est pas écrite
 
-# Types de produits : display, booster, tin
-types: [display, booster, tin]
+# ============================================================
+#  Boutiques surveillées
+#  Une seule ligne "url" suffit : le script trouve tout seul
+#  comment lire chaque site. "pages" = pages précises à lire.
+# ============================================================
+boutiques:
+  # --- Tes boutiques ---
+  - nom: Next Hobby
+    url: https://nexthobby.fr
+  - nom: King Jouet
+    url: https://www.king-jouet.com
+    pages:
+      - https://www.king-jouet.com/jeux-jouets/one-piece/page1.htm
+      - https://www.king-jouet.com/jeux-jouets/jeux-societes/cartes-a-collectionner/page1.htm
+  - nom: Le Comptoir des Écoliers
+    url: https://comptoirdesecoliers.com
+  - nom: The Geeky Pop
+    url: https://www.thegeekypop.com/fr
 
-# Langues acceptées (les produits JP/CN/KR sont toujours exclus)
-langues: [fr, en]
+  # --- Boutiques TCG indépendantes ---
+  - nom: LorenZone
+    url: https://lorenzone.fr
+  - nom: Poke-Geek
+    url: https://www.poke-geek.fr
+  - nom: Blazing Tail
+    url: https://www.blazingtail.fr
+  - nom: Cardshunter
+    url: https://www.cardshunter.fr
+  - nom: Investcollect
+    url: https://investcollect.com
+  - nom: PixelHeart
+    url: https://www.pixelheart.eu
 
-# Alerter aussi quand le titre ne précise pas la langue (fréquent en boutique anglaise)
-langue_inconnue: true
+  # --- Grandes boutiques TCG ---
+  - nom: Esprit Jeu
+    url: https://www.espritjeu.com
+  - nom: Play-In
+    url: https://www.play-in.com/fr
+  - nom: Philibert
+    url: https://www.philibertnet.com/fr
+  - nom: Ludum
+    url: https://www.ludum.fr
 
-# --- Méthode 1 : boutiques Shopify (la plus fiable) ---
-# Test : ouvre https://laboutique.fr/products.json dans Safari.
-# Si tu vois du texte avec "products", c'est du Shopify -> ajoute-la ici.
-# Astuce : mets l'URL de la collection One Piece si elle existe, c'est plus rapide :
-#   https://laboutique.fr/collections/one-piece
-boutiques_shopify:
-  - nom: "Boutique exemple"
-    url: "https://exemple-boutique.fr/collections/one-piece"
-    devise: "€"
+  # --- Jouets et enseignes ---
+  - nom: Smyths Toys
+    url: https://www.smythstoys.com/fr/fr-fr
+  - nom: 1001Hobbies
+    url: https://www.1001hobbies.fr
+  - nom: BCD Jeux
+    url: https://www.bcd-jeux.fr
+  - nom: Micromania
+    url: https://www.micromania.fr
 
-# --- Méthode 2 : pages produit d'autres boutiques ---
-# Une entrée par fiche produit. Le script cherche le texte de rupture dans la page.
-# Si possible, utilise plutôt texte_dispo (texte présent UNIQUEMENT quand c'est en stock).
-pages:
-  - nom: "Display OP-16 FR - Boutique X"
-    url: "https://exemple.fr/display-op16-fr"
-    type: display
-    texte_rupture: ["Rupture de stock", "Épuisé"]
-    # texte_dispo: ["En stock"]
+  # --- Anglais (UE) ---
+  - nom: Cardcosmos
+    url: https://cardcosmos.de/en
