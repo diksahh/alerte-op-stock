@@ -1,23 +1,14 @@
-# ============================================================
-#  Ce qu'on cherche
-#  (pour ajouter Pokémon plus tard, on ajoutera un 2e bloc ici)
-# ============================================================
 recherches:
   - nom: One Piece
-    requete: "one piece"                         # mot-clé tapé dans la recherche des boutiques
-    motif_set: '\bOP\s?[-_]?\s?0?(\d{1,2})\b'    # reconnaît OP-16, OP16, OP 16...
+    requete: "one piece"
+    motif_set: '\bOP\s?[-_]?\s?0?(\d{1,2})\b'
     prefixe: OP
-    min: 1                                       # OP-01
-    max: 18                                      # OP-18
+    min: 1
+    max: 18
     types: [display, booster, tin]
     langues: [fr, en]
-    langue_inconnue: true                        # alerter aussi si la langue n'est pas écrite
+    langue_inconnue: true
 
-# ============================================================
-#  Boutiques surveillées
-#  Une seule ligne "url" suffit : le script trouve tout seul
-#  comment lire chaque site. "pages" = pages précises à lire.
-# ============================================================
 boutiques:
   # --- Tes boutiques ---
   - nom: Next Hobby
@@ -26,7 +17,6 @@ boutiques:
     url: https://www.king-jouet.com
     pages:
       - https://www.king-jouet.com/jeux-jouets/one-piece/page1.htm
-      - https://www.king-jouet.com/jeux-jouets/jeux-societes/cartes-a-collectionner/page1.htm
   - nom: Le Comptoir des Écoliers
     url: https://comptoirdesecoliers.com
   - nom: The Geeky Pop
@@ -49,8 +39,14 @@ boutiques:
   # --- Grandes boutiques TCG ---
   - nom: Esprit Jeu
     url: https://www.espritjeu.com
+    pages:
+      - https://www.espritjeu.com/cartes-et-jcc/one-piece-le-jeu-de-cartes.html
+      - https://www.espritjeu.com/cartes-et-jcc/one-piece-le-jeu-de-cartes.html?numPage=2
+      - https://www.espritjeu.com/cartes-et-jcc/one-piece-le-jeu-de-cartes.html?numPage=3
   - nom: Play-In
     url: https://www.play-in.com/fr
+    pages:
+      - https://www.play-in.com/fr/categorie/335/booster-et-boite-one-piece
   - nom: Philibert
     url: https://www.philibertnet.com/fr
   - nom: Ludum
@@ -67,5 +63,4 @@ boutiques:
     url: https://www.micromania.fr
 
   # --- Anglais (UE) ---
-  - nom: Cardcosmos
-    url: https://cardcosmos.de/en
+  - nom: Cardshunter placeholder supprimé
