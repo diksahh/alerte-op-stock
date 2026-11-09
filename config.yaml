@@ -19,6 +19,26 @@ recherches:
     langues: [fr, en]
     langue_inconnue: true
 
+  - nom: One Piece Extra Boosters
+    requete: "one piece"
+    motif_set: '\bEB\s?[-_]?\s?0?(\d{1,2})\b'
+    prefixe: EB
+    min: 1
+    max: 9
+    types: [display, booster]
+    langues: [fr, en]
+    langue_inconnue: true
+
+  - nom: One Piece Premium Boosters
+    requete: "one piece"
+    motif_set: '\bPRB\s?[-_]?\s?0?(\d{1,2})\b'
+    prefixe: PRB
+    min: 1
+    max: 9
+    types: [display, booster]
+    langues: [fr, en]
+    langue_inconnue: true
+
 boutiques:
   # --- Tes boutiques ---
   - nom: Next Hobby
