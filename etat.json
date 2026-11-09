@@ -23,6 +23,7 @@
    "methode": "html"
   },
   "BCD Jeux": {
+   "diag": "page « 🏴‍☠️ One Piece TCG - Jeu de Cartes à Collectionner - Boutiqu », 258 ko",
    "methode": "html"
   },
   "Blazing Tail": {
@@ -51,6 +52,7 @@
    "methode": "html"
   },
   "Micromania": {
+   "diag": "page « Cartes One Piece TCG : Boosters, Decks & Collections », 490 ko",
    "methode": "html"
   },
   "Next Hobby": {
@@ -64,6 +66,7 @@
    "methode": "woo"
   },
   "Play-In": {
+   "diag": "page « One Piece TCG - Découvrez nos Boosters & Displays - One Piec », 405 ko",
    "methode": "html",
    "modele": "/recherche?controller=search&s={q}"
   },
@@ -241,5 +244,11 @@
   "https://www.poke-geek.fr/products/tripack-3-boosters-eb08-epee-et-bouclier-8-poing-de-fusion-mentali-fr": false,
   "https://www.poke-geek.fr/products/tripack-3-boosters-eb09-sword-and-shield-9-brilliant-stars-glaceon": false,
   "https://www.poke-geek.fr/products/tripack-3-boosters-eb09-sword-and-shield-9-brilliant-stars-leafeon-anglais": false
- }
+ },
+ "recherches_vues": [
+  "One Piece",
+  "One Piece Extra Boosters",
+  "One Piece Premium Boosters",
+  "One Piece Tins"
+ ]
 }
