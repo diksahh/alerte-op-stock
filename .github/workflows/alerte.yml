@@ -2,8 +2,13 @@ name: Alerte stock One Piece
 
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "*/15 * * * *"
   workflow_dispatch:
+    inputs:
+      rapport:
+        description: "Envoyer le rapport des boutiques sur Telegram"
+        type: boolean
+        default: true
 
 permissions:
   contents: write
@@ -15,7 +20,7 @@ concurrency:
 jobs:
   verif:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -26,9 +31,10 @@ jobs:
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          RAPPORT: ${{ github.event.inputs.rapport == 'true' && '1' || '0' }}
       - name: Sauvegarder l'état
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
           git add etat.json
-          git diff --cached --quiet || (git commit -m "maj état stock" && git push)
+          git diff --cached --quiet || (git commit -m "maj état stock" && git pull --rebase && git push)
