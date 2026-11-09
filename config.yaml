@@ -9,6 +9,16 @@ recherches:
     langues: [fr, en]
     langue_inconnue: true
 
+  - nom: One Piece Tins
+    requete: "one piece tin"
+    motif_set: '\bTS\s?[-_]?\s?0?(\d{1,2})\b'
+    prefixe: TS
+    min: 1
+    max: 9
+    types: [tin]
+    langues: [fr, en]
+    langue_inconnue: true
+
 boutiques:
   # --- Tes boutiques ---
   - nom: Next Hobby
@@ -59,8 +69,12 @@ boutiques:
     url: https://www.1001hobbies.fr
   - nom: BCD Jeux
     url: https://www.bcd-jeux.fr
+    pages:
+      - https://www.bcd-jeux.fr/511808-one-piece-tcg
   - nom: Micromania
     url: https://www.micromania.fr
+    pages:
+      - https://www.micromania.fr/c/cartes-one-piece
 
   # --- Anglais (UE) ---
   - nom: Cardcosmos
