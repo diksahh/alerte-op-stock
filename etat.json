@@ -69,7 +69,7 @@
    "methode": "woo"
   },
   "Play-In": {
-   "diag": "page « One Piece TCG - Découvrez nos Boosters & Displays - One Piec », 404 ko",
+   "diag": "page « One Piece TCG - Découvrez nos Boosters & Displays - One Piec », 402 ko",
    "methode": "html",
    "modele": "/recherche?controller=search&s={q}"
   },
@@ -144,7 +144,7 @@
   "https://lorenzone.fr/products/double-pack-les-sept-de-la-mer-dazur-op14-eb04": false,
   "https://nexthobby.fr/produit/one-piece-card-game-op-14-les-sept-de-la-mer-dazur-display-24-boosters/": true,
   "https://nexthobby.fr/produit/one-piece-card-game-op-17-the-worlds-strongest-warriors-display-24-boosters-anglais/": true,
-  "https://nexthobby.fr/produit/one-piece-card-game-ts-03-tin-set-vol-3-anglais/": true,
+  "https://nexthobby.fr/produit/one-piece-card-game-ts-03-tin-set-vol-3-anglais/": false,
   "https://nexthobby.fr/produit/one-piece-op-17-les-guerriers-les-plus-puissants-au-monde-display-24-boosters/": false,
   "https://nexthobby.fr/produit/protection-acrylique-pour-boite-de-boosters-one-piece-display-en-fr-op-04/": false,
   "https://nexthobby.fr/produit/protection-souple-clear-case-pour-boite-de-boosters-one-piece-op-04-en-fr-display-pack-de-5-evoretro/": true,
