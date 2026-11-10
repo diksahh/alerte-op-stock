@@ -69,7 +69,7 @@
    "methode": "woo"
   },
   "Play-In": {
-   "diag": "page « One Piece TCG - Découvrez nos Boosters & Displays - One Piec », 404 ko",
+   "diag": "page « One Piece TCG - Découvrez nos Boosters & Displays - One Piec », 405 ko",
    "methode": "html",
    "modele": "/recherche?controller=search&s={q}"
   },
