@@ -16,7 +16,8 @@
   "1001Hobbies",
   "BCD Jeux",
   "Micromania",
-  "Cardcosmos"
+  "Cardcosmos",
+  "King Jouet"
  ],
  "methodes": {
   "1001Hobbies": {
@@ -43,7 +44,10 @@
    "methode": "html",
    "modele": "/?s={q}&post_type=product"
   },
-  "King Jouet": {},
+  "King Jouet": {
+   "diag": "page « One Piece | Figurines, LEGO, Cartes et Décoration | King Jou », 402 ko",
+   "methode": "html"
+  },
   "Le Comptoir des Écoliers": {},
   "LorenZone": {
    "methode": "shopify"
@@ -52,7 +56,7 @@
    "methode": "html"
   },
   "Micromania": {
-   "diag": "page « Cartes One Piece TCG : Boosters, Decks & Collections », 490 ko",
+   "diag": "page « Cartes One Piece TCG : Boosters, Decks & Collections », 489 ko",
    "methode": "html"
   },
   "Next Hobby": {
@@ -66,7 +70,7 @@
    "methode": "woo"
   },
   "Play-In": {
-   "diag": "page « One Piece TCG - Découvrez nos Boosters & Displays - One Piec », 404 ko",
+   "diag": "page « One Piece TCG - Découvrez nos Boosters & Displays - One Piec », 405 ko",
    "methode": "html",
    "modele": "/recherche?controller=search&s={q}"
   },
