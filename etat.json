@@ -66,7 +66,7 @@
    "methode": "woo"
   },
   "Play-In": {
-   "diag": "page « One Piece TCG - Découvrez nos Boosters & Displays - One Piec », 405 ko",
+   "diag": "page « One Piece TCG - Découvrez nos Boosters & Displays - One Piec », 404 ko",
    "methode": "html",
    "modele": "/recherche?controller=search&s={q}"
   },
@@ -147,6 +147,7 @@
   "https://nexthobby.fr/produit/protection-souple-clear-case-pour-boite-de-boosters-one-piece-op-04-en-fr-display-pack-de-5-evoretro/": true,
   "https://www.blazingtail.fr/73743-29748-display-one-piece-les-sept-de-la-mer-dazur-op14.html": false,
   "https://www.blazingtail.fr/73796-one-piece-booster-sous-blister-the-best-prb01-en-francais.html": false,
+  "https://www.micromania.fr/p/booster-bipack-one-piece-op14-156814.html": false,
   "https://www.micromania.fr/p/booster-bipack-one-piece-op17-161510.html": false,
   "https://www.micromania.fr/p/booster-display-one-piece-op16-161507.html": false,
   "https://www.micromania.fr/p/booster-one-piece-eb05-163732.html": false,
