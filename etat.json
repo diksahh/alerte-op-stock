@@ -33,7 +33,7 @@
    "methode": "html"
   },
   "BCD Jeux": {
-   "diag": "page « 🏴‍☠️ One Piece TCG - Jeu de Cartes à Collectionner - Boutiqu », 259 ko",
+   "diag": "page « 🏴‍☠️ One Piece TCG - Jeu de Cartes à Collectionner - Boutiqu », 259 ko, 18 liens",
    "methode": "html"
   },
   "Blazing Tail": {
@@ -41,6 +41,7 @@
    "modele": "/recherche?controller=search&s={q}"
   },
   "Cardcosmos": {
+   "diag": "3809 produits lus sur le site, écartés ex. : Pokémon - White Flare CSV10.6C Slim Booster Display - Chinese | Pokémon - Black Bolt CSV10.5C Slim Booster Display - Chinese",
    "methode": "shopify"
   },
   "Cardshunter": {
@@ -65,6 +66,7 @@
   },
   "Le Comptoir des Écoliers": {},
   "LorenZone": {
+   "diag": "10000 produits lus sur le site, écartés ex. : Phoenix Shield - Boîte Crystal pour 10 Mini Tin (x12) | Phoenix Shield - Boîte Crystal pour 8 Mini Tin (x12)",
    "methode": "shopify"
   },
   "Ludum": {
@@ -75,13 +77,14 @@
    "modele": "/?s={q}&post_type=product"
   },
   "Micromania": {
-   "diag": "page « Cartes One Piece TCG : Boosters, Decks & Collections », 490 ko",
+   "diag": "page « Cartes One Piece TCG : Boosters, Decks & Collections », 490 ko, 118 liens, écartés ex. : Box de Boosters One Piece Box de Boosters One Piece box de boosters On | Protection Display Anti Uv Pokemon 5mm - Evoretro Protection Display A",
    "methode": "html"
   },
   "Next Hobby": {
    "methode": "woo"
   },
   "Outpost Brussels": {
+   "diag": "69 produits lus sur le site, écartés ex. : One Piece - Arkane Shield - Acrylic Display Protection  EU/US Anti UV",
    "methode": "shopify"
   },
   "Parkage": {
@@ -95,15 +98,16 @@
    "methode": "woo"
   },
   "Play-In": {
-   "diag": "page « One Piece TCG - Découvrez nos Boosters & Displays - One Piec », 402 ko",
+   "diag": "page « One Piece TCG - Découvrez nos Boosters & Displays - One Piec », 403 ko, 30 liens",
    "methode": "html",
    "modele": "/recherche?controller=search&s={q}"
   },
   "Poke-Geek": {
+   "diag": "7300 produits lus sur le site, écartés ex. : Display One Piece EB-05 – Heroines Edition Vol.2 – Japonais | Display de 36 paquets Topps UCC Match Attax 2026/27",
    "methode": "shopify"
   },
   "Shop TCG": {
-   "diag": "page « Précommande One Piece TCG, Magic & Yu-Gi-Oh! | Shop TCG », 353 ko",
+   "diag": "page « Précommande One Piece TCG, Magic & Yu-Gi-Oh! | Shop TCG », 353 ko, 89 liens, écartés ex. : Display Pokémon Display Pokémon display pokemon | Displays One Piece Displays One Piece display one piece",
    "methode": "html"
   },
   "Smyths Toys": {
@@ -116,6 +120,7 @@
    "methode": "html"
   },
   "Underpaid Collectibles": {
+   "diag": "2633 produits lus sur le site, écartés ex. : Gundam Card Game GD-06 Stardust Trails Display Box (EN) | Pokémon TCG: 30th Anniversary Celebration Booster Display M6A (T-CHN)",
    "methode": "shopify"
   },
   "Wethenew": {
