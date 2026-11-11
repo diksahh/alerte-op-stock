@@ -17,7 +17,16 @@
   "BCD Jeux",
   "Micromania",
   "Cardcosmos",
-  "King Jouet"
+  "King Jouet",
+  "Shop TCG",
+  "Outpost Brussels",
+  "Ultrajeux",
+  "Magic Bazar",
+  "Parkage",
+  "JouéClub",
+  "La Grande Récré",
+  "Wethenew",
+  "Underpaid Collectibles"
  ],
  "methodes": {
   "1001Hobbies": {
@@ -37,6 +46,7 @@
   "Cardshunter": {
    "methode": "html"
   },
+  "Cultura": {},
   "Esprit Jeu": {
    "methode": "html"
   },
@@ -44,7 +54,13 @@
    "methode": "html",
    "modele": "/?s={q}&post_type=product"
   },
+  "JouéClub": {
+   "methode": "html"
+  },
   "King Jouet": {
+   "methode": "html"
+  },
+  "La Grande Récré": {
    "methode": "html"
   },
   "Le Comptoir des Écoliers": {},
@@ -54,12 +70,22 @@
   "Ludum": {
    "methode": "html"
   },
+  "Magic Bazar": {
+   "methode": "html",
+   "modele": "/?s={q}&post_type=product"
+  },
   "Micromania": {
    "diag": "page « Cartes One Piece TCG : Boosters, Decks & Collections », 490 ko",
    "methode": "html"
   },
   "Next Hobby": {
    "methode": "woo"
+  },
+  "Outpost Brussels": {
+   "methode": "shopify"
+  },
+  "Parkage": {
+   "methode": "html"
   },
   "Philibert": {
    "methode": "html",
@@ -69,17 +95,30 @@
    "methode": "woo"
   },
   "Play-In": {
-   "diag": "page « One Piece TCG - Découvrez nos Boosters & Displays - One Piec », 403 ko",
+   "diag": "page « One Piece TCG - Découvrez nos Boosters & Displays - One Piec », 402 ko",
    "methode": "html",
    "modele": "/recherche?controller=search&s={q}"
   },
   "Poke-Geek": {
    "methode": "shopify"
   },
+  "Shop TCG": {
+   "diag": "page « Précommande One Piece TCG, Magic & Yu-Gi-Oh! | Shop TCG », 353 ko",
+   "methode": "html"
+  },
   "Smyths Toys": {
    "methode": "html"
   },
   "The Geeky Pop": {
+   "methode": "html"
+  },
+  "Ultrajeux": {
+   "methode": "html"
+  },
+  "Underpaid Collectibles": {
+   "methode": "shopify"
+  },
+  "Wethenew": {
    "methode": "html"
   }
  },
@@ -148,6 +187,40 @@
   "https://nexthobby.fr/produit/one-piece-op-17-les-guerriers-les-plus-puissants-au-monde-display-24-boosters/": false,
   "https://nexthobby.fr/produit/protection-acrylique-pour-boite-de-boosters-one-piece-display-en-fr-op-04/": false,
   "https://nexthobby.fr/produit/protection-souple-clear-case-pour-boite-de-boosters-one-piece-op-04-en-fr-display-pack-de-5-evoretro/": true,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-card-game-op05-booster-display-24-packs-awakening-of-the-new-era-en": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-card-game-op07-booster-display-24-packs-en": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-card-game-op08-booster-display-24-packs-en": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-card-game-op09-the-four-emperors-booster-display-24-packs-en": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-card-game-op10-booster-display-24-packs-en": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-card-game-op10-royal-blood-booster-display-24-packs-en-copy": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-card-game-prb-01-premium-booster-display-20-packs-en": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-card-game-tin-pack-set-vol-1-ts-01-gol-d-roger-en": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-card-game-tin-pack-set-vol-1-ts-01-gol-d-roger-en-copy": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-eb-02-extra-booster-display-24-booster-fr": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-eb-02-extra-booster-display-en": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-eb-03-extra-booster-display-24-boosters-en": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-eb-05-display-de-boosters-heroines-edition-vol-2-24-fr": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-eb-05-heroines-edition-vol-2-booster-display-24-en": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-op-13-carrying-on-his-will-display-booster-en": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-op-15-adventure-on-kami-s-island-booster-display-24-en": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-op-15-adventure-on-kami-s-island-booster-display-24-fr": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-op-16-op-16-booster-display-24-en": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-op-16-op-16-booster-display-24-fr": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-op-17-les-guerriers-les-plus-puissants-du-monde-booster-display-24-fr": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-op-17-the-worlds-strongest-warriors-booster-display-24-en": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-op10-sang-royal-display-fr-en-magasin-only": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-op11-booster-display-en": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-op11-des-poings-fifs-comme-eclair-booster-display-24-packs-fr": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-op12-legacy-of-the-master-display-en": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-op12-lheritage-du-maitre-display-fr": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-op14-booster-display-en": false,
+  "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-prb-02-en": false,
+  "https://underpaidcollectibles.com/en/products/one-piece-card-game-adventure-on-kamis-island-op15-booster-display-24-packs-en": false,
+  "https://underpaidcollectibles.com/en/products/one-piece-op11-fist-of-the-divine-speed-display-en": false,
+  "https://underpaidcollectibles.com/en/products/one-piece-op14-the-azure-seas-seven-booster-display-en": false,
+  "https://underpaidcollectibles.com/en/products/one-piece-royal-blood-op10-display-en": false,
+  "https://underpaidcollectibles.com/en/products/one-piece-tcg-op16-the-time-of-battle-display-en": false,
+  "https://underpaidcollectibles.com/en/products/one-piece-two-legends-op08-display-en": false,
   "https://www.blazingtail.fr/73743-29748-display-one-piece-les-sept-de-la-mer-dazur-op14.html": false,
   "https://www.blazingtail.fr/73796-one-piece-booster-sous-blister-the-best-prb01-en-francais.html": false,
   "https://www.micromania.fr/p/booster-bipack-one-piece-op14-156814.html": false,
@@ -186,6 +259,7 @@
   "https://www.pixelheart.eu/fr/produit/one-piece-tcg-premium-booster-prb-02-vol-2-francais/": true,
   "https://www.play-in.com/fr/produit/663264/booster-op-17-les-guerriers-les-plus-puissants-au-monde-one-piece-en": true,
   "https://www.play-in.com/fr/produit/663265/display-de-24-boosters-op-17-les-guerriers-les-plus-puissants-au-monde-one-piece-en": true,
+  "https://www.play-in.com/fr/produit/685638/display-de-24-boosters-one-piece-tcg-la-domination-de-dieu-op-18-fr": true,
   "https://www.poke-geek.fr/products/24-boosters-one-piece-card-game-eb01-extra-booster-memorial-collection-anglais-precommande": false,
   "https://www.poke-geek.fr/products/boite-24-boosters-one-piece-op15-eb04-adventure-on-kamis-island-en": false,
   "https://www.poke-geek.fr/products/boite-de-24-boosters-one-piece-card-game-500-years-in-the-future-op-07-anglais": false,
