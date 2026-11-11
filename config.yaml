@@ -105,6 +105,10 @@ boutiques:
     url: https://www.blazingtail.fr
   - nom: Cardshunter
     url: https://www.cardshunter.fr
+    pages:
+      - https://www.cardshunter.fr/categorie-produit/autres-tcg/one-piece/
+      - https://www.cardshunter.fr/categorie-produit/autres-tcg/one-piece/page/2/
+      - https://www.cardshunter.fr/categorie-produit/autres-tcg/one-piece/page/3/
   - nom: Investcollect
     url: https://investcollect.com
   - nom: PixelHeart
@@ -123,6 +127,10 @@ boutiques:
       - https://www.play-in.com/fr/categorie/335/booster-et-boite-one-piece
   - nom: Philibert
     url: https://www.philibertnet.com/fr
+    pages:
+      - https://www.philibertnet.com/fr/15860-one-piece-le-jeu-de-cartes
+      - https://www.philibertnet.com/fr/15860-one-piece-le-jeu-de-cartes?p=2
+      - https://www.philibertnet.com/fr/15860-one-piece-le-jeu-de-cartes?p=3
   - nom: Ludum
     url: https://www.ludum.fr
   - nom: Shop TCG
@@ -135,10 +143,16 @@ boutiques:
     url: https://outpostbrussels.be/collections/one-piece-1
   - nom: Ultrajeux
     url: https://www.ultrajeux.com
+    pages:
+      - https://www.ultrajeux.com/jeu-1031-one-piece-card-game.html
   - nom: Magic Bazar
     url: https://www.magicbazar.fr
   - nom: Parkage
     url: https://www.parkage.com/fr
+    pages:
+      - https://www.parkage.com/fr/one-piece-card-game
+      - https://www.parkage.com/fr/one-piece-card-game?page=2
+      - https://www.parkage.com/fr/one-piece-card-game?page=3
 
   # --- Jouets et enseignes ---
   - nom: Smyths Toys
