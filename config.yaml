@@ -1,3 +1,6 @@
+# ============================================================
+#  Ce qu'on cherche : uniquement displays et tins, en FR et EN
+# ============================================================
 recherches:
   - nom: One Piece
     requete: "one piece"
@@ -5,9 +8,10 @@ recherches:
     prefixe: OP
     min: 1
     max: 18
-    types: [display, booster, tin]
+    types: [display, tin]
     langues: [fr, en]
     langue_inconnue: true
+    exclure: [pokémon, pokemon, épée et bouclier, epee et bouclier, écarlate, ecarlate]
 
   - nom: One Piece Tins
     requete: "one piece tin"
@@ -18,6 +22,7 @@ recherches:
     types: [tin]
     langues: [fr, en]
     langue_inconnue: true
+    exclure: [pokémon, pokemon, épée et bouclier, epee et bouclier, écarlate, ecarlate]
 
   - nom: One Piece Extra Boosters
     requete: "one piece"
@@ -25,9 +30,10 @@ recherches:
     prefixe: EB
     min: 1
     max: 9
-    types: [display, booster]
+    types: [display]
     langues: [fr, en]
     langue_inconnue: true
+    exclure: [pokémon, pokemon, épée et bouclier, epee et bouclier, écarlate, ecarlate]
 
   - nom: One Piece Premium Boosters
     requete: "one piece"
@@ -35,10 +41,44 @@ recherches:
     prefixe: PRB
     min: 1
     max: 9
-    types: [display, booster]
+    types: [display]
     langues: [fr, en]
     langue_inconnue: true
+    exclure: [pokémon, pokemon, épée et bouclier, epee et bouclier, écarlate, ecarlate]
 
+# ============================================================
+#  Mots qui font ignorer un produit (accessoires, protections...)
+#  Il suffit du début du mot : "acryl" écarte acrylique et acrylic
+# ============================================================
+mots_exclus:
+  - protection
+  - protector
+  - protège
+  - protege
+  - acryl
+  - magnetic
+  - magnétique
+  - plexi
+  - vitrine
+  - rangement
+  - storage
+  - étui
+  - etui
+  - présentoir
+  - presentoir
+  - coque
+  - support
+  - display vide
+  - empty
+  - deck box
+  - deckbox
+  - porte
+  - peluche
+  - poster
+
+# ============================================================
+#  Boutiques surveillées
+# ============================================================
 boutiques:
   # --- Tes boutiques ---
   - nom: Next Hobby
@@ -81,6 +121,20 @@ boutiques:
     url: https://www.philibertnet.com/fr
   - nom: Ludum
     url: https://www.ludum.fr
+  - nom: Shop TCG
+    url: https://www.shop-tcg.fr
+    pages:
+      - https://www.shop-tcg.fr/one-piece/display-one-piece/
+      - https://www.shop-tcg.fr/one-piece/
+      - https://www.shop-tcg.fr/precommandes/
+  - nom: Outpost Brussels
+    url: https://outpostbrussels.be/collections/one-piece-1
+  - nom: Ultrajeux
+    url: https://www.ultrajeux.com
+  - nom: Magic Bazar
+    url: https://www.magicbazar.fr
+  - nom: Parkage
+    url: https://www.parkage.com/fr
 
   # --- Jouets et enseignes ---
   - nom: Smyths Toys
@@ -95,7 +149,17 @@ boutiques:
     url: https://www.micromania.fr
     pages:
       - https://www.micromania.fr/c/cartes-one-piece
+  - nom: Cultura
+    url: https://www.cultura.com
+  - nom: JouéClub
+    url: https://www.joueclub.fr
+  - nom: La Grande Récré
+    url: https://www.lagranderecre.fr
 
-  # --- Anglais (UE) ---
+  # --- Revente / anglais (UE) ---
+  - nom: Wethenew
+    url: https://wethenew.com
   - nom: Cardcosmos
     url: https://cardcosmos.de/en
+  - nom: Underpaid Collectibles
+    url: https://underpaidcollectibles.com/en

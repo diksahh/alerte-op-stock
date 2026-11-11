@@ -53,6 +53,13 @@ TYPES = {
                           r"24\s+(boosters|packs))\b", re.I),
     "booster": re.compile(r"\b(boosters?|packs?)\b", re.I),
 }
+RE_EXCLU_PERSO = None  # mots exclus ajoutés dans config.yaml (mots_exclus)
+
+
+def est_exclu(texte):
+    return bool(RE_EXCLU.search(texte) or (RE_EXCLU_PERSO and RE_EXCLU_PERSO.search(texte)))
+
+
 RE_FR = re.compile(r"\b(fr|vf|fran[cç]ais|french)\b", re.I)
 RE_EN = re.compile(r"(?i:\b(eng|anglais|english|englisch)\b)|\bEN\b")  # "en" minuscule = mot français
 
@@ -82,11 +89,13 @@ def slug_texte(url):
 
 def analyser(texte, recherches):
     """Renvoie {jeu, set, type, langue} si le produit nous intéresse, sinon None."""
-    if RE_EXCLU.search(texte):
+    if est_exclu(texte):
         return None
     for r in recherches:
         m = r["_motif"].search(texte)
         if not m:
+            continue
+        if r.get("_exclu") and r["_exclu"].search(texte):  # ex. "Pokémon" pour les EB
             continue
         num = int(m.group(1))
         if not r["min"] <= num <= r["max"]:
@@ -141,7 +150,7 @@ def via_shopify(s, b, recherches):
                 continue
             variantes = p.get("variants") or []
             # une fiche peut proposer plusieurs langues : on ne garde que les variantes FR/EN
-            bonnes = [v for v in variantes if not RE_EXCLU.search(str(v.get("title") or ""))]
+            bonnes = [v for v in variantes if not est_exclu(str(v.get("title") or ""))]
             if variantes and not bonnes:
                 continue
             if info["langue"] == "?":
@@ -369,7 +378,7 @@ def via_html(s, b, recherches, memo):
             continue
         time.sleep(PAUSE)
         if titre:  # le titre complet de la fiche précise souvent la langue
-            if RE_EXCLU.search(titre):
+            if est_exclu(titre):
                 continue
             info = analyser(titre + " " + slug_texte(url), recherches) or info
         out.append(produit(b, url, titre or url, dispo, prix, "€", info, pre))
@@ -485,8 +494,15 @@ def main():
     with open(FICHIER_CONFIG, encoding="utf-8") as f:
         cfg = yaml.safe_load(f)
     recherches = cfg["recherches"]
+    global RE_EXCLU_PERSO
+    mots = [m for m in (cfg.get("mots_exclus") or []) if str(m).strip()]
+    if mots:  # début de mot : "acryl" exclut aussi "acrylique" et "acrylic"
+        RE_EXCLU_PERSO = re.compile(r"\b(?:" + "|".join(re.escape(str(m)) for m in mots) + ")", re.I)
     for r in recherches:
         r["_motif"] = re.compile(r["motif_set"], re.I)
+        mots_r = [str(m) for m in (r.get("exclure") or []) if str(m).strip()]
+        r["_exclu"] = re.compile(r"\b(?:" + "|".join(re.escape(m) for m in mots_r) + ")", re.I) \
+            if mots_r else None
 
     etat = {}
     if os.path.exists(FICHIER_ETAT):
