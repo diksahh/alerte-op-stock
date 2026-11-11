@@ -130,9 +130,9 @@ def lire_json(r):
 
 
 # ---------------------------------------------------------------- méthode 1 : Shopify
-def via_shopify(s, b, recherches):
+def via_shopify(s, b, recherches, memo=None):
     base = b["url"].rstrip("/")
-    out = []
+    out, lus, ecartes = [], 0, []
     for page in range(1, 41):
         r = s.get(f"{base}/products.json", params={"limit": 250, "page": page}, timeout=TIMEOUT)
         if r.status_code != 200:
@@ -143,10 +143,13 @@ def via_shopify(s, b, recherches):
         if not isinstance(data, dict) or "products" not in data:
             raise PasCeType("pas Shopify")
         prods = data["products"]
+        lus += len(prods)
         for p in prods:
             titre = p.get("title", "")
             info = analyser(titre, recherches)
             if not info:
+                if RE_INDICE.search(titre) and len(ecartes) < 2:
+                    ecartes.append(titre[:70])
                 continue
             variantes = p.get("variants") or []
             # une fiche peut proposer plusieurs langues : on ne garde que les variantes FR/EN
@@ -165,6 +168,9 @@ def via_shopify(s, b, recherches):
         if len(prods) < 250:
             break
         time.sleep(PAUSE)
+    if memo is not None:
+        memo["diag"] = f"{lus} produits lus sur le site" + \
+            (f", écartés ex. : {' | '.join(ecartes)}" if ecartes else "")
     return out
 
 
@@ -209,27 +215,48 @@ RE_TITLE_ATTR = re.compile(r"title\s*=\s*[\"']([^\"']+)[\"']", re.I)
 RE_LDJSON = re.compile(r"<script[^>]*application/ld\+json[^>]*>(.*?)</script>", re.S | re.I)
 
 
-def extraire_candidats(page_html, page_url, recherches):
+def domaine_de(url):
+    d = urlparse(url).netloc.lower()
+    return d[4:] if d.startswith("www.") else d
+
+
+RE_INDICE = re.compile(r"display|booster\s*box|\btin\b|bo[iî]te de 24", re.I)
+
+
+def extraire_candidats(page_html, page_url, recherches, diag=None):
     """Trouve dans une page de liste les liens vers des produits qui nous intéressent."""
-    domaine = urlparse(page_url).netloc
-    textes = {}
+    domaine = domaine_de(page_url)
+    textes, positions = {}, {}
     for m in RE_LIEN.finditer(page_html):
         attrs, interieur = m.group(1), m.group(2)
         h = RE_HREF.search(attrs)
         if not h:
             continue
         url = urljoin(page_url, htmlmod.unescape(h.group(1))).split("#")[0]
-        if urlparse(url).netloc != domaine:
+        if domaine_de(url) != domaine:
             continue
         t = RE_TITLE_ATTR.search(attrs)
         alts = " ".join(re.findall(r"alt\s*=\s*[\"']([^\"']+)[\"']", interieur, re.I))
         txt = htmlmod.unescape(" ".join(re.sub(r"<[^>]+>", " ", interieur).split()) + " " + alts)
         textes.setdefault(url, []).append(txt + " " + (htmlmod.unescape(t.group(1)) if t else ""))
+        positions.setdefault(url, m.start())
     candidats = {}
     for url, morceaux in textes.items():
-        info = analyser(" ".join(morceaux) + " " + slug_texte(url), recherches)
+        texte = " ".join(morceaux) + " " + slug_texte(url)
+        info = analyser(texte, recherches)
         if info:
             candidats[url] = info
+        elif diag is not None and RE_INDICE.search(texte):
+            diag.setdefault("ecartes", []).append(" ".join(texte.split())[:70])
+    if diag is not None:
+        diag["liens"] = diag.get("liens", 0) + len(textes)
+    # extrait de la liste propre à chaque produit : jusqu'au produit suivant
+    debuts = sorted(positions[u] for u in candidats)
+    for url, info in candidats.items():
+        debut = positions[url]
+        suivants = [d for d in debuts if d > debut]
+        fin = min(suivants[0] if suivants else len(page_html), debut + 2500)
+        info["_extrait"] = page_html[debut:fin]
     return candidats
 
 
@@ -324,6 +351,22 @@ def titre_page(h, taille):
     return f"page « {t} », {taille // 1000} ko"
 
 
+MARQUES_RUPTURE = ("rupture", "épuisé", "epuise", "out of stock", "sold out", "indisponible",
+                   "plus disponible", "bientôt disponible", "prévenez-moi", "me prévenir")
+MARQUES_DISPO = ("ajouter au panier", "add to cart", "en stock", "in stock", "précommander",
+                 "pre-order", "acheter")
+
+
+def stock_depuis_liste(extrait):
+    """Dernier recours : lit 'Rupture' / 'Ajouter au panier' à côté du produit dans la liste."""
+    bas = htmlmod.unescape(re.sub(r"<[^>]+>", " ", extrait or "")).lower()
+    if any(m in bas for m in MARQUES_RUPTURE):
+        return False
+    if any(m in bas for m in MARQUES_DISPO):
+        return True
+    return None
+
+
 def via_html(s, b, recherches, memo):
     candidats = {}
     if b.get("pages"):
@@ -339,8 +382,10 @@ def via_html(s, b, recherches, memo):
                 erreur = f"HTTP {r.status_code} sur {page}"
                 continue
             lues += 1
-            memo["diag"] = titre_page(r.text, len(r.text))
-            candidats.update(extraire_candidats(r.text, r.url, recherches))
+            d = {}
+            candidats.update(extraire_candidats(r.text, r.url, recherches, d))
+            memo["diag"] = (f"{titre_page(r.text, len(r.text))}, {d.get('liens', 0)} liens"
+                            + (f", écartés ex. : {' | '.join(d['ecartes'][:2])}" if d.get("ecartes") else ""))
         if not lues:
             raise PasCeType(erreur or "aucune page lisible")
     else:
@@ -370,18 +415,24 @@ def via_html(s, b, recherches, memo):
         if not candidats and erreur and erreur.startswith("HTTP 403"):
             raise PasCeType(erreur)
 
-    out = []
+    out, fiches_ko = [], 0
     for url, info in list(candidats.items())[:MAX_FICHES]:
+        extrait = info.pop("_extrait", "")
         try:
             dispo, pre, titre, prix = lire_fiche(s, url, b)
         except requests.RequestException:
-            continue
+            fiches_ko += 1
+            dispo, pre, titre, prix = None, False, "", None
         time.sleep(PAUSE)
+        if dispo is None:
+            dispo = stock_depuis_liste(extrait)
         if titre:  # le titre complet de la fiche précise souvent la langue
             if est_exclu(titre):
                 continue
             info = analyser(titre + " " + slug_texte(url), recherches) or info
-        out.append(produit(b, url, titre or url, dispo, prix, "€", info, pre))
+        out.append(produit(b, url, titre or slug_texte(url) or url, dispo, prix, "€", info, pre))
+    if fiches_ko:
+        memo["diag"] = f"{fiches_ko} fiche(s) produit refusée(s), stock lu sur la liste"
     return out
 
 
@@ -400,7 +451,7 @@ def scanner(b, recherches, memo):
     for methode in ordre:
         try:
             if methode == "shopify":
-                prods = via_shopify(s, b, recherches)
+                prods = via_shopify(s, b, recherches, memo)
             elif methode == "woo":
                 prods = via_woo(s, b, recherches)
             else:
@@ -457,6 +508,9 @@ def rapport(resultats, memos=None):
         ligne = f"✅ {res['nom']} [{res['methode']}] : {len(prods)} produits, {en_stock} en stock"
         if inconnus:
             ligne += f", {inconnus} stock illisible"
+        diag = memos[i].get("diag") if memos else None
+        if diag and "fiche" in diag:
+            ligne += f" ({diag})"
         lignes.append(ligne)
     return "\n".join(lignes)
 
