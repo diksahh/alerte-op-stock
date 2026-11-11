@@ -95,6 +95,10 @@ boutiques:
   # --- Boutiques TCG indépendantes ---
   - nom: LorenZone
     url: https://lorenzone.fr
+    collections:   # catalogue complet trop grand : on lit seulement ces rubriques
+      - https://lorenzone.fr/collections/display-one-piece
+      - https://lorenzone.fr/collections/produits-officiels-one-piece-bandai
+      - https://lorenzone.fr/collections/precommandes
   - nom: Poke-Geek
     url: https://www.poke-geek.fr
   - nom: Blazing Tail

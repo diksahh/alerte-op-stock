@@ -131,8 +131,25 @@ def lire_json(r):
 
 # ---------------------------------------------------------------- méthode 1 : Shopify
 def via_shopify(s, b, recherches, memo=None):
-    base = b["url"].rstrip("/")
-    out, lus, ecartes = [], 0, []
+    out, lus, ecartes, vus = [], 0, [], set()
+    bases = [c.rstrip("/") for c in (b.get("collections") or [b["url"]])]
+    reussies, erreur = 0, None
+    for base in bases:
+        try:
+            lus, ecartes = _shopify_base(s, b, base, recherches, out, vus, lus, ecartes)
+            reussies += 1
+        except PasCeType as e:  # une rubrique qui n'existe plus ne bloque pas les autres
+            erreur = e
+    if not reussies:
+        raise erreur or PasCeType("aucune rubrique lisible")
+    if memo is not None:
+        memo["diag"] = f"{lus} produits lus sur le site" + \
+            (f", écartés ex. : {' | '.join(ecartes)}" if ecartes else "")
+    return out
+
+
+def _shopify_base(s, b, base, recherches, out, vus, lus, ecartes):
+    racine = base.split("/collections/")[0]  # garde /en ou /fr éventuel
     for page in range(1, 41):
         r = s.get(f"{base}/products.json", params={"limit": 250, "page": page}, timeout=TIMEOUT)
         if r.status_code != 200:
@@ -163,15 +180,15 @@ def via_shopify(s, b, recherches, memo=None):
             dispo = any(v.get("available") for v in bonnes)
             prix = next((v.get("price") for v in bonnes if v.get("available")),
                         bonnes[0].get("price") if bonnes else None)
-            lien = f"{base}/products/{p['handle']}"
+            lien = f"{racine}/products/{p['handle']}"
+            if lien in vus:
+                continue
+            vus.add(lien)
             out.append(produit(b, lien, titre, dispo, prix, b.get("devise", "€"), info))
         if len(prods) < 250:
             break
         time.sleep(PAUSE)
-    if memo is not None:
-        memo["diag"] = f"{lus} produits lus sur le site" + \
-            (f", écartés ex. : {' | '.join(ecartes)}" if ecartes else "")
-    return out
+    return lus, ecartes
 
 
 # ---------------------------------------------------------------- méthode 2 : WooCommerce
@@ -209,8 +226,8 @@ def via_woo(s, b, recherches):
 
 
 # ---------------------------------------------------------------- méthode 3 : pages HTML
-RE_LIEN = re.compile(r"<a\b([^>]*)>(.*?)</a>", re.S | re.I)
-RE_HREF = re.compile(r"href\s*=\s*[\"']([^\"']+)[\"']", re.I)
+RE_LIEN = re.compile(r"<a\b((?:[^>\"']|\"[^\"]*\"|'[^']*')*)>(.*?)(?:</a>|(?=<a\b))", re.S | re.I)
+RE_HREF = re.compile(r"href\s*=\s*(?:[\"']([^\"']+)[\"']|([^\s>]+))", re.I)
 RE_TITLE_ATTR = re.compile(r"title\s*=\s*[\"']([^\"']+)[\"']", re.I)
 RE_LDJSON = re.compile(r"<script[^>]*application/ld\+json[^>]*>(.*?)</script>", re.S | re.I)
 
@@ -232,7 +249,7 @@ def extraire_candidats(page_html, page_url, recherches, diag=None):
         h = RE_HREF.search(attrs)
         if not h:
             continue
-        url = urljoin(page_url, htmlmod.unescape(h.group(1))).split("#")[0]
+        url = urljoin(page_url, htmlmod.unescape(h.group(1) or h.group(2))).split("#")[0]
         if domaine_de(url) != domaine:
             continue
         t = RE_TITLE_ATTR.search(attrs)
@@ -247,7 +264,11 @@ def extraire_candidats(page_html, page_url, recherches, diag=None):
         if info:
             candidats[url] = info
         elif diag is not None and RE_INDICE.search(texte):
-            diag.setdefault("ecartes", []).append(" ".join(texte.split())[:70])
+            court = " ".join(texte.split())[:70]
+            if any(r["_motif"].search(texte) for r in recherches):
+                diag.setdefault("ecartes", []).insert(0, court)
+            else:
+                diag.setdefault("ecartes", []).append(court)
     if diag is not None:
         diag["liens"] = diag.get("liens", 0) + len(textes)
     # extrait de la liste propre à chaque produit : jusqu'au produit suivant
@@ -370,7 +391,7 @@ def stock_depuis_liste(extrait):
 def via_html(s, b, recherches, memo):
     candidats = {}
     if b.get("pages"):
-        lues, erreur = 0, None
+        lues, erreur, d = 0, None, {}
         for page in b["pages"]:
             try:
                 r = s.get(page, timeout=TIMEOUT)
@@ -382,9 +403,8 @@ def via_html(s, b, recherches, memo):
                 erreur = f"HTTP {r.status_code} sur {page}"
                 continue
             lues += 1
-            d = {}
             candidats.update(extraire_candidats(r.text, r.url, recherches, d))
-            memo["diag"] = (f"{titre_page(r.text, len(r.text))}, {d.get('liens', 0)} liens"
+            memo["diag"] = (f"{lues} page(s) lue(s), {d.get('liens', 0)} liens"
                             + (f", écartés ex. : {' | '.join(d['ecartes'][:2])}" if d.get("ecartes") else ""))
         if not lues:
             raise PasCeType(erreur or "aucune page lisible")
