@@ -33,7 +33,7 @@
    "methode": "html"
   },
   "BCD Jeux": {
-   "diag": "page « 🏴‍☠️ One Piece TCG - Jeu de Cartes à Collectionner - Boutiqu », 259 ko, 18 liens",
+   "diag": "1 page(s) lue(s), 254 liens, écartés ex. : Disney Lorcana TCG - Chapitre 14 Hyperia City : Display de 24 Boosters",
    "methode": "html"
   },
   "Blazing Tail": {
@@ -66,7 +66,7 @@
   },
   "Le Comptoir des Écoliers": {},
   "LorenZone": {
-   "diag": "10000 produits lus sur le site, écartés ex. : Phoenix Shield - Boîte Crystal pour 10 Mini Tin (x12) | Phoenix Shield - Boîte Crystal pour 8 Mini Tin (x12)",
+   "diag": "1151 produits lus sur le site, écartés ex. : Display - Les Guerriers Les Plus Puissants Au Monde / OP-17 (Japonais) | Phoenix Shield - Protection acrylique Display One Piece",
    "methode": "shopify"
   },
   "Ludum": {
@@ -77,7 +77,7 @@
    "modele": "/?s={q}&post_type=product"
   },
   "Micromania": {
-   "diag": "page « Cartes One Piece TCG : Boosters, Decks & Collections », 490 ko, 118 liens, écartés ex. : Box de Boosters One Piece Box de Boosters One Piece box de boosters On | Protection Display Anti Uv Pokemon 5mm - Evoretro Protection Display A",
+   "diag": "1 page(s) lue(s), 120 liens, écartés ex. : Box de Boosters One Piece Box de Boosters One Piece box de boosters On | Protection Display Anti Uv Pokemon 5mm | Evoretro Protection Display A",
    "methode": "html"
   },
   "Next Hobby": {
@@ -98,7 +98,7 @@
    "methode": "woo"
   },
   "Play-In": {
-   "diag": "page « One Piece TCG - Découvrez nos Boosters & Displays - One Piec », 403 ko, 30 liens",
+   "diag": "1 page(s) lue(s), 31 liens",
    "methode": "html",
    "modele": "/recherche?controller=search&s={q}"
   },
@@ -107,7 +107,7 @@
    "methode": "shopify"
   },
   "Shop TCG": {
-   "diag": "page « Précommande One Piece TCG, Magic & Yu-Gi-Oh! | Shop TCG », 353 ko, 89 liens, écartés ex. : Display Pokémon Display Pokémon display pokemon | Displays One Piece Displays One Piece display one piece",
+   "diag": "3 page(s) lue(s), 252 liens, écartés ex. : Display One Piece OP-17 JP Bandai 129,90 € Continuer mes achats Stock  | Display One Piece OP-17 JP Bandai 129,90 € Continuer mes achats Stock ",
    "methode": "html"
   },
   "Smyths Toys": {
@@ -185,7 +185,21 @@
   "https://lorenzone.fr/products/booster-two-legends-op-08-anglais": false,
   "https://lorenzone.fr/products/booster-voltage-eclatant-eb04": false,
   "https://lorenzone.fr/products/booster-wings-of-the-captain-op-06-anglais": false,
+  "https://lorenzone.fr/products/display-aventure-sur-lile-de-dieu-op15-eb04": false,
+  "https://lorenzone.fr/products/display-eb-01": false,
+  "https://lorenzone.fr/products/display-eb-02": false,
+  "https://lorenzone.fr/products/display-fist-of-god-speed-op-11": false,
+  "https://lorenzone.fr/products/display-les-sept-de-la-mer-dazur-op14-eb04": false,
+  "https://lorenzone.fr/products/display-lheure-de-la-bataille-decisive-op16": false,
+  "https://lorenzone.fr/products/display-op-06": false,
+  "https://lorenzone.fr/products/display-op-07": false,
+  "https://lorenzone.fr/products/display-op-08": false,
+  "https://lorenzone.fr/products/display-royal-blood-op-10": false,
+  "https://lorenzone.fr/products/display-successeurs-op13": false,
+  "https://lorenzone.fr/products/display-the-best-2-prb02": false,
+  "https://lorenzone.fr/products/display-the-four-emperors-op-09": false,
   "https://lorenzone.fr/products/double-pack-les-sept-de-la-mer-dazur-op14-eb04": false,
+  "https://lorenzone.fr/products/mini-tin-sang-royal-op10": false,
   "https://nexthobby.fr/produit/one-piece-card-game-op-14-les-sept-de-la-mer-dazur-display-24-boosters/": true,
   "https://nexthobby.fr/produit/one-piece-card-game-op-17-the-worlds-strongest-warriors-display-24-boosters-anglais/": true,
   "https://nexthobby.fr/produit/one-piece-card-game-ts-03-tin-set-vol-3-anglais/": false,
@@ -220,12 +234,47 @@
   "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-op12-lheritage-du-maitre-display-fr": false,
   "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-op14-booster-display-en": false,
   "https://outpostbrussels.be/collections/one-piece-1/products/one-piece-prb-02-en": false,
+  "https://outpostbrussels.be/products/one-piece-card-game-op05-booster-display-24-packs-awakening-of-the-new-era-en": false,
+  "https://outpostbrussels.be/products/one-piece-card-game-op07-booster-display-24-packs-en": false,
+  "https://outpostbrussels.be/products/one-piece-card-game-op08-booster-display-24-packs-en": false,
+  "https://outpostbrussels.be/products/one-piece-card-game-op09-the-four-emperors-booster-display-24-packs-en": false,
+  "https://outpostbrussels.be/products/one-piece-card-game-op10-booster-display-24-packs-en": false,
+  "https://outpostbrussels.be/products/one-piece-card-game-op10-royal-blood-booster-display-24-packs-en-copy": false,
+  "https://outpostbrussels.be/products/one-piece-card-game-prb-01-premium-booster-display-20-packs-en": false,
+  "https://outpostbrussels.be/products/one-piece-card-game-tin-pack-set-vol-1-ts-01-gol-d-roger-en": false,
+  "https://outpostbrussels.be/products/one-piece-card-game-tin-pack-set-vol-1-ts-01-gol-d-roger-en-copy": false,
+  "https://outpostbrussels.be/products/one-piece-eb-02-extra-booster-display-24-booster-fr": false,
+  "https://outpostbrussels.be/products/one-piece-eb-02-extra-booster-display-en": false,
+  "https://outpostbrussels.be/products/one-piece-eb-03-extra-booster-display-24-boosters-en": false,
+  "https://outpostbrussels.be/products/one-piece-eb-05-display-de-boosters-heroines-edition-vol-2-24-fr": false,
+  "https://outpostbrussels.be/products/one-piece-eb-05-heroines-edition-vol-2-booster-display-24-en": false,
+  "https://outpostbrussels.be/products/one-piece-op-13-carrying-on-his-will-display-booster-en": false,
+  "https://outpostbrussels.be/products/one-piece-op-15-adventure-on-kami-s-island-booster-display-24-en": false,
+  "https://outpostbrussels.be/products/one-piece-op-15-adventure-on-kami-s-island-booster-display-24-fr": false,
+  "https://outpostbrussels.be/products/one-piece-op-16-op-16-booster-display-24-en": false,
+  "https://outpostbrussels.be/products/one-piece-op-16-op-16-booster-display-24-fr": false,
+  "https://outpostbrussels.be/products/one-piece-op-17-les-guerriers-les-plus-puissants-du-monde-booster-display-24-fr": false,
+  "https://outpostbrussels.be/products/one-piece-op-17-the-worlds-strongest-warriors-booster-display-24-en": false,
+  "https://outpostbrussels.be/products/one-piece-op10-sang-royal-display-fr-en-magasin-only": false,
+  "https://outpostbrussels.be/products/one-piece-op11-booster-display-en": false,
+  "https://outpostbrussels.be/products/one-piece-op11-des-poings-fifs-comme-eclair-booster-display-24-packs-fr": false,
+  "https://outpostbrussels.be/products/one-piece-op12-legacy-of-the-master-display-en": false,
+  "https://outpostbrussels.be/products/one-piece-op12-lheritage-du-maitre-display-fr": false,
+  "https://outpostbrussels.be/products/one-piece-op14-booster-display-en": false,
+  "https://outpostbrussels.be/products/one-piece-prb-02-en": false,
   "https://underpaidcollectibles.com/en/products/one-piece-card-game-adventure-on-kamis-island-op15-booster-display-24-packs-en": false,
   "https://underpaidcollectibles.com/en/products/one-piece-op11-fist-of-the-divine-speed-display-en": false,
   "https://underpaidcollectibles.com/en/products/one-piece-op14-the-azure-seas-seven-booster-display-en": false,
   "https://underpaidcollectibles.com/en/products/one-piece-royal-blood-op10-display-en": false,
   "https://underpaidcollectibles.com/en/products/one-piece-tcg-op16-the-time-of-battle-display-en": false,
   "https://underpaidcollectibles.com/en/products/one-piece-two-legends-op08-display-en": false,
+  "https://www.bcd-jeux.fr/one-piece-tcg/39019-one-piece-op17-les-guerriers-les-plus-puissants-au-monde-display-24-boosters-fr-bandai-4582770058833.html": true,
+  "https://www.bcd-jeux.fr/one-piece-tcg/40601-one-piece-eb05-heroines-edition-vol-2-display-24-boosters-fr-4280000097187.html": true,
+  "https://www.bcd-jeux.fr/one-piece-tcg/40603-one-piece-ts03-tin-pack-jaune-set-03-monkey-d-luffy-bandai-4582770066807.html": true,
+  "https://www.bcd-jeux.fr/one-piece-tcg/40604-one-piece-ts03-tin-pack-rouge-set-03-monkey-d-luffy-bandai.html": true,
+  "https://www.bcd-jeux.fr/one-piece-tcg/40606-one-piece-ts03-tin-pack-vert-fonce-set-03-shanks-bandai.html": true,
+  "https://www.bcd-jeux.fr/one-piece-tcg/40607-one-piece-ts03-tin-pack-violet-set-03-boa-hancock-bandai.html": true,
+  "https://www.bcd-jeux.fr/one-piece-tcg/40608-one-piece-ts03-tin-pack-rose-set-03-boa-hancock-bandai.html": true,
   "https://www.blazingtail.fr/73743-29748-display-one-piece-les-sept-de-la-mer-dazur-op14.html": false,
   "https://www.blazingtail.fr/73796-one-piece-booster-sous-blister-the-best-prb01-en-francais.html": false,
   "https://www.micromania.fr/p/booster-bipack-one-piece-op14-156814.html": false,
