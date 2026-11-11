@@ -81,7 +81,8 @@
    "methode": "html"
   },
   "Next Hobby": {
-   "methode": "woo"
+   "methode": "html",
+   "modele": "/?s={q}&post_type=product"
   },
   "Outpost Brussels": {
    "diag": "69 produits lus sur le site, écartés ex. : One Piece - Arkane Shield - Acrylic Display Protection  EU/US Anti UV",
@@ -109,7 +110,6 @@
    "methode": "shopify"
   },
   "Shop TCG": {
-   "diag": "3 page(s) lue(s), 252 liens, écartés ex. : Display One Piece OP-17 JP Bandai 129,90 € Continuer mes achats Stock  | Display One Piece OP-17 JP Bandai 129,90 € Continuer mes achats Stock ",
    "methode": "html"
   },
   "Smyths Toys": {
@@ -123,7 +123,7 @@
    "methode": "html"
   },
   "Underpaid Collectibles": {
-   "diag": "2633 produits lus sur le site, écartés ex. : Gundam Card Game GD-06 Stardust Trails Display Box (EN) | Pokémon TCG: 30th Anniversary Celebration Booster Display M6A (T-CHN)",
+   "diag": "2634 produits lus sur le site, écartés ex. : Gundam Card Game GD-06 Stardust Trails Display Box (EN) | Pokémon TCG: 30th Anniversary Celebration Booster Display M6A (T-CHN)",
    "methode": "shopify"
   },
   "Wethenew": {
