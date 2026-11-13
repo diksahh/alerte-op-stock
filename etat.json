@@ -109,6 +109,7 @@
    "methode": "shopify"
   },
   "Shop TCG": {
+   "diag": "3 page(s) lue(s), 257 liens, écartés ex. : Display One Piece OP-17 JP Bandai 129,90 € Continuer mes achats Stock  | Display One Piece OP-17 JP Bandai 129,90 € Continuer mes achats Stock ",
    "methode": "html"
   },
   "Smyths Toys": {
@@ -122,7 +123,7 @@
    "methode": "html"
   },
   "Underpaid Collectibles": {
-   "diag": "2650 produits lus sur le site, écartés ex. : 2027 Topps FC Barcelona Collector Tin | 2027 Topps Inter Mailand Collector Tin",
+   "diag": "2660 produits lus sur le site, écartés ex. : Magic The Gathering: Star Trek Play Booster Display (30 Booster) (EN) | Magic The Gathering: Star Trek Play Booster Display (30 Booster) (DE)",
    "methode": "shopify"
   },
   "Wethenew": {
@@ -273,10 +274,12 @@
   "https://underpaidcollectibles.com/en/products/one-piece-tcg-op16-the-time-of-battle-display-en": false,
   "https://underpaidcollectibles.com/en/products/one-piece-two-legends-op08-display-en": false,
   "https://www.bcd-jeux.fr/one-piece-tcg/34298-one-piece-op14-les-7-de-la-mer-d-azur-booster-display-24-bandai-4582769923357.html": true,
+  "https://www.bcd-jeux.fr/one-piece-tcg/34367-one-piece-ts02-tin-pack-set-02-portgas-d-ace-bandai.html": true,
   "https://www.bcd-jeux.fr/one-piece-tcg/39019-one-piece-op17-les-guerriers-les-plus-puissants-au-monde-display-24-boosters-fr-bandai-4582770058833.html": true,
   "https://www.bcd-jeux.fr/one-piece-tcg/40601-one-piece-eb05-heroines-edition-vol-2-display-24-boosters-fr-4280000097187.html": true,
   "https://www.bcd-jeux.fr/one-piece-tcg/40603-one-piece-ts03-tin-pack-jaune-set-03-monkey-d-luffy-bandai-4582770066807.html": true,
   "https://www.bcd-jeux.fr/one-piece-tcg/40604-one-piece-ts03-tin-pack-rouge-set-03-monkey-d-luffy-bandai.html": true,
+  "https://www.bcd-jeux.fr/one-piece-tcg/40605-one-piece-ts03-tin-pack-vert-clair-set-03-shanks-bandai.html": true,
   "https://www.bcd-jeux.fr/one-piece-tcg/40606-one-piece-ts03-tin-pack-vert-fonce-set-03-shanks-bandai.html": true,
   "https://www.bcd-jeux.fr/one-piece-tcg/40607-one-piece-ts03-tin-pack-violet-set-03-boa-hancock-bandai.html": true,
   "https://www.bcd-jeux.fr/one-piece-tcg/40608-one-piece-ts03-tin-pack-rose-set-03-boa-hancock-bandai.html": true,
