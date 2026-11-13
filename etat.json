@@ -77,6 +77,7 @@
    "modele": "/?s={q}&post_type=product"
   },
   "Micromania": {
+   "diag": "1 page(s) lue(s), 0 liens",
    "methode": "html"
   },
   "Next Hobby": {
@@ -146,7 +147,7 @@
   "https://investcollect.com/eshop/p/display-one-piece-heroines-edition-vol_-2-eb05-24-boosters-scelle-anglais.html": true,
   "https://investcollect.com/eshop/p/display-one-piece-la-domination-de-dieu-op18-24-boosters-scelle-francais.html": false,
   "https://investcollect.com/eshop/p/display-one-piece-les-guerriers-les-plus-puissants-au-monde-op17-24-boosters-scelle-anglais.html": true,
-  "https://investcollect.com/eshop/p/display-one-piece-the-dominance-of-god-op18-24-boosters-scelle-anglais.html": false,
+  "https://investcollect.com/eshop/p/display-one-piece-the-dominance-of-god-op18-24-boosters-scelle-anglais.html": true,
   "https://investcollect.com/eshop/p/mini-tin-one-piece-tin-pack-set-vol_1-ts-01-illustration-gol-d_-roger-scelle-anglais.html": true,
   "https://lorenzone.fr/products/booster-500-years-in-the-future-op-07-anglais": false,
   "https://lorenzone.fr/products/booster-a-fist-of-divine-speed-op-11-anglais": false,
