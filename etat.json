@@ -123,7 +123,7 @@
    "methode": "html"
   },
   "Underpaid Collectibles": {
-   "diag": "2660 produits lus sur le site, écartés ex. : Magic The Gathering: Star Trek Play Booster Display (30 Booster) (EN) | Magic The Gathering: Star Trek Play Booster Display (30 Booster) (DE)",
+   "diag": "2663 produits lus sur le site, écartés ex. : Magic The Gathering: Star Trek Play Booster Display (30 Booster) (EN) | Magic The Gathering: Star Trek Play Booster Display (30 Booster) (DE)",
    "methode": "shopify"
   },
   "Wethenew": {
@@ -146,7 +146,7 @@
   "https://investcollect.com/eshop/p/display-one-piece-heroines-edition-vol_-2-eb05-24-boosters-scelle-anglais.html": true,
   "https://investcollect.com/eshop/p/display-one-piece-la-domination-de-dieu-op18-24-boosters-scelle-francais.html": false,
   "https://investcollect.com/eshop/p/display-one-piece-les-guerriers-les-plus-puissants-au-monde-op17-24-boosters-scelle-anglais.html": true,
-  "https://investcollect.com/eshop/p/display-one-piece-the-dominance-of-god-op18-24-boosters-scelle-anglais.html": true,
+  "https://investcollect.com/eshop/p/display-one-piece-the-dominance-of-god-op18-24-boosters-scelle-anglais.html": false,
   "https://investcollect.com/eshop/p/mini-tin-one-piece-tin-pack-set-vol_1-ts-01-illustration-gol-d_-roger-scelle-anglais.html": true,
   "https://lorenzone.fr/products/booster-500-years-in-the-future-op-07-anglais": false,
   "https://lorenzone.fr/products/booster-a-fist-of-divine-speed-op-11-anglais": false,
