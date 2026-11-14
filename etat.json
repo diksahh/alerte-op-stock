@@ -66,7 +66,7 @@
   },
   "Le Comptoir des Écoliers": {},
   "LorenZone": {
-   "diag": "1151 produits lus sur le site, écartés ex. : Display - Les Guerriers Les Plus Puissants Au Monde / OP-17 (Japonais) | Phoenix Shield - Protection acrylique Display One Piece",
+   "diag": "1152 produits lus sur le site, écartés ex. : Display - Les Guerriers Les Plus Puissants Au Monde / OP-17 (Japonais) | Display - Deck Pour Débutant",
    "methode": "shopify"
   },
   "Ludum": {
@@ -81,6 +81,7 @@
    "methode": "html"
   },
   "Next Hobby": {
+   "diag": "1 fiche(s) produit refusée(s), stock lu sur la liste",
    "methode": "html",
    "modele": "/?s={q}&post_type=product"
   },
