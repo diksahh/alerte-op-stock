@@ -101,7 +101,7 @@
    "methode": "woo"
   },
   "Play-In": {
-   "diag": "1 page(s) lue(s), 36 liens",
+   "diag": "1 page(s) lue(s), 38 liens",
    "methode": "html",
    "modele": "/recherche?controller=search&s={q}"
   },
