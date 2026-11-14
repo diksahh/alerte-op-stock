@@ -98,7 +98,8 @@
    "modele": "/recherche?controller=search&search_query={q}"
   },
   "PixelHeart": {
-   "methode": "woo"
+   "methode": "html",
+   "modele": "/?s={q}&post_type=product"
   },
   "Play-In": {
    "diag": "1 page(s) lue(s), 38 liens",
@@ -110,6 +111,7 @@
    "methode": "shopify"
   },
   "Shop TCG": {
+   "diag": "2 page(s) lue(s), 166 liens, écartés ex. : Display One Piece OP-17 JP Bandai 129,90 € Continuer mes achats Stock  | Display One Piece OP-17 JP Bandai 129,90 € Continuer mes achats Stock ",
    "methode": "html"
   },
   "Smyths Toys": {
@@ -295,7 +297,7 @@
   "https://www.pixelheart.eu/en/produit/one-piece-24-boosters-box-op17-the-worlds-strongest-warriors/": false,
   "https://www.pixelheart.eu/en/produit/one-piece-24-boosters-box-op18-english-version/": true,
   "https://www.pixelheart.eu/en/produit/one-piece-24-boosters-box-op18-french-version/": true,
-  "https://www.pixelheart.eu/en/produit/one-piece-24-extra-booster-box-eb05-heroines-edition-vol-2-english-version/": true,
+  "https://www.pixelheart.eu/en/produit/one-piece-24-extra-booster-box-eb05-heroines-edition-vol-2-english-version/": false,
   "https://www.pixelheart.eu/en/produit/one-piece-24-extra-booster-box-eb05-heroines-edition-vol-2-french-version/": true,
   "https://www.pixelheart.eu/en/produit/one-piece-op16-the-time-of-battle-24-booster-box-french-version/": false,
   "https://www.pixelheart.eu/en/produit/one-piece-op16-the-time-of-battle-booster-french-version/": false,
