@@ -41,8 +41,8 @@
    "modele": "/recherche?controller=search&s={q}"
   },
   "Cardcosmos": {
-   "diag": "3837 produits lus sur le site, écartés ex. : Magic: The Gathering – Nauctis: The Sunken Realm – Collector Booster D | Magic: The Gathering – Nauctis: Das versunkene Reich – Sammler-Booster",
-   "methode": "shopify"
+   "methode": "html",
+   "modele": "/?s={q}&post_type=product"
   },
   "Cardshunter": {
    "methode": "html"
@@ -121,12 +121,11 @@
    "methode": "html"
   },
   "Ultrajeux": {
-   "diag": "1 page(s) lue(s), 471 liens, écartés ex. : Tin Box Tin Box cat 1 2 37 tin box | Mini-Tin Mini-Tin cat 1 4 488 mini tin",
+   "diag": "1 page(s) lue(s), 470 liens, écartés ex. : Tin Box Tin Box cat 1 2 37 tin box | Mini-Tin Mini-Tin cat 1 4 488 mini tin",
    "methode": "html"
   },
   "Underpaid Collectibles": {
-   "diag": "2664 produits lus sur le site, écartés ex. : Magic The Gathering: Star Trek Play Booster Display (30 Booster) (EN) | Magic The Gathering: Star Trek Play Booster Display (30 Booster) (DE)",
-   "methode": "shopify"
+   "methode": "html"
   },
   "Wethenew": {
    "methode": "html"
