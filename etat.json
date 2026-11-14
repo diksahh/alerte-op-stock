@@ -81,7 +81,6 @@
    "methode": "html"
   },
   "Next Hobby": {
-   "diag": "1 fiche(s) produit refusée(s), stock lu sur la liste",
    "methode": "html",
    "modele": "/?s={q}&post_type=product"
   },
