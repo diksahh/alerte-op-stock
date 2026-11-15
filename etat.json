@@ -33,7 +33,7 @@
    "methode": "html"
   },
   "BCD Jeux": {
-   "diag": "1 page(s) lue(s), 255 liens",
+   "diag": "1 page(s) lue(s), 254 liens",
    "methode": "html"
   },
   "Blazing Tail": {
@@ -45,6 +45,7 @@
    "modele": "/?s={q}&post_type=product"
   },
   "Cardshunter": {
+   "diag": "3 page(s) lue(s), 1100 liens, écartés ex. : Carton de 10 Displays - ONE PIECE CARD THE BEST PRB-01 Carton de 10 Di | Display PRB-02 The Best – One Piece Card Game - JAPONAIS Display PRB-0",
    "methode": "html"
   },
   "Cultura": {},
@@ -286,6 +287,34 @@
   "https://www.bcd-jeux.fr/one-piece-tcg/40608-one-piece-ts03-tin-pack-rose-set-03-boa-hancock-bandai.html": true,
   "https://www.blazingtail.fr/73743-29748-display-one-piece-les-sept-de-la-mer-dazur-op14.html": false,
   "https://www.blazingtail.fr/73796-one-piece-booster-sous-blister-the-best-prb01-en-francais.html": false,
+  "https://www.cardshunter.fr/produit/display-eb-03-heroines-anglais-one-piece-card-game-trou-dans-le-scellage/": true,
+  "https://www.cardshunter.fr/produit/display-eb-03-heroines-anglais-one-piece-card-game/": false,
+  "https://www.cardshunter.fr/produit/display-eb-03-heroines-francais-one-piece-card-game/": false,
+  "https://www.cardshunter.fr/produit/display-eb-05-heroines-2-one-piece-card-game-francais/": false,
+  "https://www.cardshunter.fr/produit/display-op-10-sang-royal-anglais-one-piece-card-game/": true,
+  "https://www.cardshunter.fr/produit/display-op-10-sang-royal-francais-one-piece-card-game/": true,
+  "https://www.cardshunter.fr/produit/display-op-11-des-poings-vifs-comme-leclair-anglais-one-piece-card-game/": true,
+  "https://www.cardshunter.fr/produit/display-op-11-des-poings-vifs-comme-leclair-francais-one-piece-card-game-abimeeee/": false,
+  "https://www.cardshunter.fr/produit/display-op-11-des-poings-vifs-comme-leclair-francais-one-piece-card-game/": false,
+  "https://www.cardshunter.fr/produit/display-op-12-lheritage-du-maitre-anglais-one-piece-card-game/": true,
+  "https://www.cardshunter.fr/produit/display-op-12-lheritage-du-maitre-francais-one-piece-card-game/": false,
+  "https://www.cardshunter.fr/produit/display-op-13-successeurs-anglais-one-piece-card-game-sticker-sur-le-display/": true,
+  "https://www.cardshunter.fr/produit/display-op-13-successeurs-anglais-one-piece-card-game-trou-dans-le-scellage/": false,
+  "https://www.cardshunter.fr/produit/display-op-13-successeurs-francais-one-piece-card-game-2/": true,
+  "https://www.cardshunter.fr/produit/display-op-14-les-sept-de-la-mer-dazur-anglais-one-piece-card-game/": true,
+  "https://www.cardshunter.fr/produit/display-op-14-les-sept-de-la-mer-dazur-francais-one-piece-card-game/": false,
+  "https://www.cardshunter.fr/produit/display-op-15-aventure-sur-lile-de-dieu-one-piece-card-game-anglais-petit-enfoncement/": true,
+  "https://www.cardshunter.fr/produit/display-op-15-aventure-sur-lile-de-dieu-one-piece-card-game-anglais/": true,
+  "https://www.cardshunter.fr/produit/display-op-15-aventure-sur-lile-de-dieu-one-piece-card-game-francais/": false,
+  "https://www.cardshunter.fr/produit/display-op-16-lheure-de-la-bataille-decisive-one-piece-card-game-anglais/": true,
+  "https://www.cardshunter.fr/produit/display-op-16-lheure-de-la-bataille-decisive-one-piece-card-game-francais/": false,
+  "https://www.cardshunter.fr/produit/display-op-17-les-guerriers-les-plus-puissants-du-monde-one-piece-card-game-anglais/": false,
+  "https://www.cardshunter.fr/produit/display-op-17-les-guerriers-les-plus-puissants-du-monde-one-piece-card-game-francais/": false,
+  "https://www.cardshunter.fr/produit/display-prb-02-the-best-vol-2-anglais-one-piece-card-game/": true,
+  "https://www.cardshunter.fr/produit/display-prb-02-the-best-vol-2-francais-one-piece-card-game/": true,
+  "https://www.cardshunter.fr/produit/lot-de-6-mini-tin-ts-02-one-piece-card-game-francais/": false,
+  "https://www.cardshunter.fr/produit/mini-tin-ts-02-one-piece-card-game-illustration-aleatoire-anglais/": true,
+  "https://www.cardshunter.fr/produit/mini-tin-ts-03-one-piece-card-game-illustration-aleatoire-francais/": false,
   "https://www.micromania.fr/p/booster-bipack-one-piece-op14-156814.html": false,
   "https://www.micromania.fr/p/booster-bipack-one-piece-op17-161510.html": false,
   "https://www.micromania.fr/p/booster-display-one-piece-op16-161507.html": false,
