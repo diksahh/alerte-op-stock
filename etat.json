@@ -107,8 +107,8 @@
    "modele": "/recherche?controller=search&s={q}"
   },
   "Poke-Geek": {
-   "diag": "7301 produits lus sur le site, écartés ex. : Display One Piece OP-18 The Dominance of God – 24 Boosters Japonais –  | Display One Piece EB-05 – Heroines Edition Vol.2 – Japonais",
-   "methode": "shopify"
+   "methode": "html",
+   "modele": "/recherche?controller=search&search_query={q}"
   },
   "Shop TCG": {
    "diag": "3 page(s) lue(s), 258 liens, écartés ex. : Display One Piece OP-17 JP Bandai 129,90 € Continuer mes achats Stock  | Display One Piece OP-17 JP Bandai 129,90 € Continuer mes achats Stock ",
@@ -421,6 +421,7 @@
   "https://www.poke-geek.fr/products/one-piece-eb-02-extra-booster-display-24-boosters-anglais": false,
   "https://www.poke-geek.fr/products/one-piece-jcc-display-24-boosters-op13-carrying-on-his-will-anglais": false,
   "https://www.poke-geek.fr/products/one-piece-op15-bundle-en-adventure-on-kamis-island": false,
+  "https://www.poke-geek.fr/products/one-piece-ts03-tin-pack-set-03-francais": false,
   "https://www.poke-geek.fr/products/pack-deaux-fraiches-139-172-eb09-stars-etincelantes-carte-pokemon-francaise": true,
   "https://www.poke-geek.fr/products/pack-one-piece-eb05-en-acrylique-phoenix-shield": false,
   "https://www.poke-geek.fr/products/pack-one-piece-eb05-fr-acrylique-phoenix-shield": true,
