@@ -111,6 +111,7 @@
    "modele": "/recherche?controller=search&search_query={q}"
   },
   "Shop TCG": {
+   "diag": "3 page(s) lue(s), 258 liens, écartés ex. : Display One Piece OP-17 JP Bandai 129,90 € Continuer mes achats Stock  | Display One Piece OP-17 JP Bandai 129,90 € Continuer mes achats Stock ",
    "methode": "html"
   },
   "Smyths Toys": {
@@ -294,6 +295,7 @@
   "https://underpaidcollectibles.com/en/products/one-piece-two-legends-op08-display-en?_pos=23&_sid=c0f030a0d&_ss=r": false,
   "https://underpaidcollectibles.com/en/products/one-piece-two-legends-op08-display-en?_pos=23&_sid=cf245d19e&_ss=r": false,
   "https://underpaidcollectibles.com/en/products/one-piece-two-legends-op08-display-en?_pos=23&_sid=d49dd88c9&_ss=r": false,
+  "https://underpaidcollectibles.com/en/products/one-piece-two-legends-op08-display-en?_pos=23&_sid=f1866bc65&_ss=r": false,
   "https://underpaidcollectibles.com/en/products/one-piece-two-legends-op08-display-en?_pos=23&_sid=f593eabc0&_ss=r": false,
   "https://underpaidcollectibles.com/en/products/one-piece-two-legends-op08-display-en?_pos=23&_sid=f5fd2b856&_ss=r": false,
   "https://underpaidcollectibles.com/en/products/one-piece-two-legends-op08-display-en?_pos=23&_sid=fa6add140&_ss=r": false,
