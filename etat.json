@@ -111,6 +111,7 @@
    "modele": "/recherche?controller=search&search_query={q}"
   },
   "Shop TCG": {
+   "diag": "3 page(s) lue(s), 258 liens, écartés ex. : Display One Piece OP-17 JP Bandai 129,90 € Continuer mes achats Stock  | Display One Piece OP-17 JP Bandai 129,90 € Continuer mes achats Stock ",
    "methode": "html"
   },
   "Smyths Toys": {
@@ -309,6 +310,7 @@
   "https://underpaidcollectibles.com/en/products/one-piece-two-legends-op08-display-en?_pos=23&_sid=f5fd2b856&_ss=r": false,
   "https://underpaidcollectibles.com/en/products/one-piece-two-legends-op08-display-en?_pos=23&_sid=fa6add140&_ss=r": false,
   "https://underpaidcollectibles.com/en/products/one-piece-two-legends-op08-display-en?_pos=24&_sid=9007d2cba&_ss=r": false,
+  "https://underpaidcollectibles.com/en/products/one-piece-two-legends-op08-display-en?_pos=24&_sid=c9f9ed91f&_ss=r": false,
   "https://www.bcd-jeux.fr/one-piece-tcg/34298-one-piece-op14-les-7-de-la-mer-d-azur-booster-display-24-bandai-4582769923357.html": true,
   "https://www.bcd-jeux.fr/one-piece-tcg/34367-one-piece-ts02-tin-pack-set-02-portgas-d-ace-bandai.html": true,
   "https://www.bcd-jeux.fr/one-piece-tcg/39019-one-piece-op17-les-guerriers-les-plus-puissants-au-monde-display-24-boosters-fr-bandai-4582770058833.html": true,
