@@ -102,7 +102,6 @@
    "modele": "/?s={q}&post_type=product"
   },
   "Play-In": {
-   "diag": "1 page(s) lue(s), 37 liens",
    "methode": "html",
    "modele": "/recherche?controller=search&s={q}"
   },
@@ -148,7 +147,7 @@
   "https://investcollect.com/eshop/p/display-one-piece-heroines-edition-vol_-2-eb05-24-boosters-scelle-anglais.html": true,
   "https://investcollect.com/eshop/p/display-one-piece-la-domination-de-dieu-op18-24-boosters-scelle-francais.html": false,
   "https://investcollect.com/eshop/p/display-one-piece-les-guerriers-les-plus-puissants-au-monde-op17-24-boosters-scelle-anglais.html": false,
-  "https://investcollect.com/eshop/p/display-one-piece-the-dominance-of-god-op18-24-boosters-scelle-anglais.html": true,
+  "https://investcollect.com/eshop/p/display-one-piece-the-dominance-of-god-op18-24-boosters-scelle-anglais.html": false,
   "https://investcollect.com/eshop/p/mini-tin-one-piece-tin-pack-set-vol_1-ts-01-illustration-gol-d_-roger-scelle-anglais.html": true,
   "https://lorenzone.fr/products/booster-500-years-in-the-future-op-07-anglais": false,
   "https://lorenzone.fr/products/booster-a-fist-of-divine-speed-op-11-anglais": false,
@@ -388,13 +387,13 @@
   "https://www.pixelheart.eu/en/produit/one-piece-tcg-premium-booster-prb-02-vol-2-french/": true,
   "https://www.pixelheart.eu/fr/produit/booster-premium-one-piece-tcg-prb-02-vol-2-anglais/": true,
   "https://www.pixelheart.eu/fr/produit/display-one-piece-card-game-op-17-24-boosters-the-worlds-strongest-warriors/": false,
-  "https://www.pixelheart.eu/fr/produit/one-piece-24-extra-booster-box-eb05-heroines-edition-vol-2-english-version-2/": true,
-  "https://www.pixelheart.eu/fr/produit/one-piece-24-extra-booster-box-eb05-heroines-edition-vol-2-version-francaise/": true,
+  "https://www.pixelheart.eu/fr/produit/one-piece-24-extra-booster-box-eb05-heroines-edition-vol-2-english-version-2/": false,
+  "https://www.pixelheart.eu/fr/produit/one-piece-24-extra-booster-box-eb05-heroines-edition-vol-2-version-francaise/": false,
   "https://www.pixelheart.eu/fr/produit/one-piece-card-game-boite-de-boosters-francais-display-op16-lheure-de-la-bataille-decisive/": false,
   "https://www.pixelheart.eu/fr/produit/one-piece-card-game-boite-de-boosters-francais-display-op17-les-plus-puissants-des-guerriers/": true,
   "https://www.pixelheart.eu/fr/produit/one-piece-card-game-booster-op16-lheure-de-la-bataille-decisive/": false,
-  "https://www.pixelheart.eu/fr/produit/one-piece-card-game-op-18-24-boosters-version-anglaise/": true,
-  "https://www.pixelheart.eu/fr/produit/one-piece-card-game-op-18-24-boosters-version-francaise/": true,
+  "https://www.pixelheart.eu/fr/produit/one-piece-card-game-op-18-24-boosters-version-anglaise/": false,
+  "https://www.pixelheart.eu/fr/produit/one-piece-card-game-op-18-24-boosters-version-francaise/": false,
   "https://www.pixelheart.eu/fr/produit/one-piece-mini-tin-pack-set-vol-3-ts-03-boa-hancock-rose-version-japonaise/": true,
   "https://www.pixelheart.eu/fr/produit/one-piece-mini-tin-pack-set-vol-3-ts-03-boa-hancock-violet-version-japonaise/": true,
   "https://www.pixelheart.eu/fr/produit/one-piece-mini-tin-pack-set-vol-3-ts-03-luffy-jaune-version-japonaise/": true,
@@ -473,7 +472,7 @@
   "https://www.poke-geek.fr/products/tripack-3-boosters-eb09-sword-and-shield-9-brilliant-stars-leafeon-anglais": false,
   "https://www.ultrajeux.com/produit-33532-display-eb05-one-piece-heroines-edition-vol2-4582770059168.html": true,
   "https://www.ultrajeux.com/produit-33538-ts03-tin-pack-shanks-v2-4582770066807.html": true,
-  "https://www.ultrajeux.com/produit-33539-ts03-tin-pack-boa-hancock-v2-4582770066807.html": true,
+  "https://www.ultrajeux.com/produit-33539-ts03-tin-pack-boa-hancock-v2-4582770066807.html": false,
   "https://www.ultrajeux.com/produit-33540-ts03-tin-pack-boa-hancock-v1-4582770066807.html": false,
   "https://www.ultrajeux.com/produit-33649-display-op18-la-domination-de-dieu-4582770067415.html": true
  },
