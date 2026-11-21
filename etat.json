@@ -102,6 +102,7 @@
    "modele": "/?s={q}&post_type=product"
   },
   "Play-In": {
+   "diag": "1 page(s) lue(s), 38 liens",
    "methode": "html",
    "modele": "/recherche?controller=search&s={q}"
   },
@@ -403,7 +404,7 @@
   "https://www.pixelheart.eu/fr/produit/one-piece-op16-the-time-of-battle-booster-2/": true,
   "https://www.pixelheart.eu/fr/produit/one-piece-tcg-premium-booster-prb-02-vol-2-francais/": true,
   "https://www.play-in.com/fr/produit/663264/booster-op-17-les-guerriers-les-plus-puissants-au-monde-one-piece-en": true,
-  "https://www.play-in.com/fr/produit/663265/display-de-24-boosters-op-17-les-guerriers-les-plus-puissants-au-monde-one-piece-en": true,
+  "https://www.play-in.com/fr/produit/663265/display-de-24-boosters-op-17-les-guerriers-les-plus-puissants-au-monde-one-piece-en": false,
   "https://www.play-in.com/fr/produit/685638/display-de-24-boosters-one-piece-tcg-la-domination-de-dieu-op-18-fr": false,
   "https://www.poke-geek.fr/products/24-boosters-one-piece-card-game-eb01-extra-booster-memorial-collection-anglais-precommande": false,
   "https://www.poke-geek.fr/products/boite-24-boosters-one-piece-op15-eb04-adventure-on-kamis-island-en": false,
