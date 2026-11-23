@@ -102,7 +102,7 @@
    "modele": "/?s={q}&post_type=product"
   },
   "Play-In": {
-   "diag": "1 page(s) lue(s), 38 liens",
+   "diag": "1 page(s) lue(s), 0 liens",
    "methode": "html",
    "modele": "/recherche?controller=search&s={q}"
   },
@@ -393,6 +393,7 @@
   "https://www.pixelheart.eu/fr/produit/one-piece-card-game-boite-de-boosters-francais-display-op16-lheure-de-la-bataille-decisive/": false,
   "https://www.pixelheart.eu/fr/produit/one-piece-card-game-boite-de-boosters-francais-display-op17-les-plus-puissants-des-guerriers/": true,
   "https://www.pixelheart.eu/fr/produit/one-piece-card-game-booster-op16-lheure-de-la-bataille-decisive/": false,
+  "https://www.pixelheart.eu/fr/produit/one-piece-card-game-case-de-display-version-francaise-12-display-op17-les-plus-puissants-des-guerriers/": true,
   "https://www.pixelheart.eu/fr/produit/one-piece-card-game-op-18-24-boosters-version-anglaise/": false,
   "https://www.pixelheart.eu/fr/produit/one-piece-card-game-op-18-24-boosters-version-francaise/": false,
   "https://www.pixelheart.eu/fr/produit/one-piece-mini-tin-pack-set-vol-3-ts-03-boa-hancock-rose-version-japonaise/": true,
@@ -475,7 +476,8 @@
   "https://www.ultrajeux.com/produit-33538-ts03-tin-pack-shanks-v2-4582770066807.html": true,
   "https://www.ultrajeux.com/produit-33539-ts03-tin-pack-boa-hancock-v2-4582770066807.html": false,
   "https://www.ultrajeux.com/produit-33540-ts03-tin-pack-boa-hancock-v1-4582770066807.html": false,
-  "https://www.ultrajeux.com/produit-33649-display-op18-la-domination-de-dieu-4582770067415.html": true
+  "https://www.ultrajeux.com/produit-33649-display-op18-la-domination-de-dieu-4582770067415.html": true,
+  "https://www.ultrajeux.com/produit-33665-display-eb05-one-piece-heroines-edition-vol2-0810199502786.html": true
  },
  "recherches_vues": [
   "One Piece",
