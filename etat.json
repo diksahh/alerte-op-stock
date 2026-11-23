@@ -33,7 +33,7 @@
    "methode": "html"
   },
   "BCD Jeux": {
-   "diag": "1 page(s) lue(s), 257 liens, écartés ex. : Riftbound : Radiance - Display 24 booster FR 119,90 € Riftbound : Radi",
+   "diag": "1 page(s) lue(s), 256 liens, écartés ex. : Riftbound : Radiance - Display 24 booster FR 119,90 € Riftbound : Radi | Disney Lorcana TCG - Chapitre 14 Hyperia City : Display de 24 Boosters",
    "methode": "html"
   },
   "Blazing Tail": {
@@ -66,7 +66,7 @@
   },
   "Le Comptoir des Écoliers": {},
   "LorenZone": {
-   "diag": "1162 produits lus sur le site, écartés ex. : Display - Les Guerriers Les Plus Puissants Au Monde / OP-17 (Japonais) | Display - Deck Pour Débutant",
+   "diag": "1164 produits lus sur le site, écartés ex. : Display - Les Guerriers Les Plus Puissants Au Monde / OP-17 (Japonais) | Display - Deck Pour Débutant",
    "methode": "shopify"
   },
   "Ludum": {
@@ -102,16 +102,15 @@
    "modele": "/?s={q}&post_type=product"
   },
   "Play-In": {
-   "diag": "1 page(s) lue(s), 0 liens",
+   "diag": "1 page(s) lue(s), 38 liens",
    "methode": "html",
    "modele": "/recherche?controller=search&s={q}"
   },
   "Poke-Geek": {
    "methode": "html",
-   "modele": "/recherche?controller=search&search_query={q}"
+   "modele": "/search?text={q}"
   },
   "Shop TCG": {
-   "diag": "3 page(s) lue(s), 280 liens, écartés ex. : Display One Piece OP-17 JP Bandai 129,90 € Continuer mes achats Stock  | Display One Piece OP-17 JP Bandai 129,90 € Continuer mes achats Stock ",
    "methode": "html"
   },
   "Smyths Toys": {
@@ -126,7 +125,7 @@
   },
   "Underpaid Collectibles": {
    "methode": "html",
-   "modele": "/search?q={q}&type=product"
+   "modele": "/?s={q}&post_type=product"
   },
   "Wethenew": {
    "methode": "html"
@@ -270,6 +269,7 @@
   "https://outpostbrussels.be/products/one-piece-op12-lheritage-du-maitre-display-fr": false,
   "https://outpostbrussels.be/products/one-piece-op14-booster-display-en": false,
   "https://outpostbrussels.be/products/one-piece-prb-02-en": false,
+  "https://underpaidcollectibles.com/en/collections/tcgs/products/one-piece-tcg-the-dominance-of-god-op-18-display": false,
   "https://underpaidcollectibles.com/en/products/one-piece-card-game-adventure-on-kamis-island-op15-booster-display-24-packs-en": false,
   "https://underpaidcollectibles.com/en/products/one-piece-op11-fist-of-the-divine-speed-display-en": false,
   "https://underpaidcollectibles.com/en/products/one-piece-op14-the-azure-seas-seven-booster-display-en": false,
@@ -405,7 +405,7 @@
   "https://www.pixelheart.eu/fr/produit/one-piece-op16-the-time-of-battle-booster-2/": true,
   "https://www.pixelheart.eu/fr/produit/one-piece-tcg-premium-booster-prb-02-vol-2-francais/": true,
   "https://www.play-in.com/fr/produit/663264/booster-op-17-les-guerriers-les-plus-puissants-au-monde-one-piece-en": true,
-  "https://www.play-in.com/fr/produit/663265/display-de-24-boosters-op-17-les-guerriers-les-plus-puissants-au-monde-one-piece-en": true,
+  "https://www.play-in.com/fr/produit/663265/display-de-24-boosters-op-17-les-guerriers-les-plus-puissants-au-monde-one-piece-en": false,
   "https://www.play-in.com/fr/produit/685638/display-de-24-boosters-one-piece-tcg-la-domination-de-dieu-op-18-fr": false,
   "https://www.poke-geek.fr/products/24-boosters-one-piece-card-game-eb01-extra-booster-memorial-collection-anglais-precommande": false,
   "https://www.poke-geek.fr/products/boite-24-boosters-one-piece-op15-eb04-adventure-on-kamis-island-en": false,
@@ -447,6 +447,7 @@
   "https://www.poke-geek.fr/products/display-one-piece-card-game-romance-dawn-op01": false,
   "https://www.poke-geek.fr/products/display-one-piece-card-game-two-legends-op-08-version-anglaise": false,
   "https://www.poke-geek.fr/products/display-one-piece-eb03-heroines-edition-anglais": false,
+  "https://www.poke-geek.fr/products/display-one-piece-op-18-la-domination-de-dieu-24-boosters-francais": true,
   "https://www.poke-geek.fr/products/display-one-piece-op06-anglais": false,
   "https://www.poke-geek.fr/products/display-one-piece-tcg-sang-royal-op10-24-boosters-edition-fr-scelle": false,
   "https://www.poke-geek.fr/products/display-op-11-des-poings-vifs-comme-l-eclair-francais-one-piece-card-game": false,
