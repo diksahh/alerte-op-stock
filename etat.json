@@ -111,6 +111,7 @@
    "modele": "/search?text={q}"
   },
   "Shop TCG": {
+   "diag": "3 page(s) lue(s), 319 liens, écartés ex. : Display One Piece OP-17 JP Bandai 129,90 € Continuer mes achats Stock  | Display One Piece OP-17 JP Bandai 129,90 € Continuer mes achats Stock ",
    "methode": "html"
   },
   "Smyths Toys": {
@@ -269,6 +270,7 @@
   "https://outpostbrussels.be/products/one-piece-op12-lheritage-du-maitre-display-fr": false,
   "https://outpostbrussels.be/products/one-piece-op14-booster-display-en": false,
   "https://outpostbrussels.be/products/one-piece-prb-02-en": false,
+  "https://underpaidcollectibles.com/en-us/collections/tcgs/products/one-piece-tcg-the-dominance-of-god-op-18-display": false,
   "https://underpaidcollectibles.com/en/collections/tcgs/products/one-piece-tcg-the-dominance-of-god-op-18-display": false,
   "https://underpaidcollectibles.com/en/products/one-piece-card-game-adventure-on-kamis-island-op15-booster-display-24-packs-en": false,
   "https://underpaidcollectibles.com/en/products/one-piece-op11-fist-of-the-divine-speed-display-en": false,
@@ -406,7 +408,9 @@
   "https://www.pixelheart.eu/fr/produit/one-piece-tcg-premium-booster-prb-02-vol-2-francais/": true,
   "https://www.play-in.com/fr/produit/663264/booster-op-17-les-guerriers-les-plus-puissants-au-monde-one-piece-en": true,
   "https://www.play-in.com/fr/produit/663265/display-de-24-boosters-op-17-les-guerriers-les-plus-puissants-au-monde-one-piece-en": false,
-  "https://www.play-in.com/fr/produit/685638/display-de-24-boosters-one-piece-tcg-la-domination-de-dieu-op-18-fr": false,
+  "https://www.play-in.com/fr/produit/685638/display-de-24-boosters-one-piece-tcg-la-domination-de-dieu-op-18-fr": true,
+  "https://www.poke-geek.fr/fr-us/products/display-one-piece-op-18-la-domination-de-dieu-24-boosters-francais": true,
+  "https://www.poke-geek.fr/fr-us/products/one-piece-ts03-tin-pack-set-03-francais": false,
   "https://www.poke-geek.fr/products/24-boosters-one-piece-card-game-eb01-extra-booster-memorial-collection-anglais-precommande": false,
   "https://www.poke-geek.fr/products/boite-24-boosters-one-piece-op15-eb04-adventure-on-kamis-island-en": false,
   "https://www.poke-geek.fr/products/boite-de-24-boosters-one-piece-card-game-500-years-in-the-future-op-07-anglais": false,
