@@ -111,7 +111,6 @@
    "modele": "/search?text={q}"
   },
   "Shop TCG": {
-   "diag": "3 page(s) lue(s), 370 liens, écartés ex. : Display One Piece OP-17 JP Bandai 129,90 € Continuer mes achats Stock  | Display One Piece OP-17 JP Bandai 129,90 € Continuer mes achats Stock ",
    "methode": "html"
   },
   "Smyths Toys": {
@@ -121,7 +120,7 @@
    "methode": "html"
   },
   "Ultrajeux": {
-   "diag": "1 page(s) lue(s), 469 liens, écartés ex. : Tin Box Tin Box cat 1 2 37 tin box | Mini-Tin Mini-Tin cat 1 4 488 mini tin",
+   "diag": "1 page(s) lue(s), 468 liens, écartés ex. : Tin Box Tin Box cat 1 2 37 tin box | Mini-Tin Mini-Tin cat 1 4 488 mini tin",
    "methode": "html"
   },
   "Underpaid Collectibles": {
