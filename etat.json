@@ -102,7 +102,7 @@
    "modele": "/?s={q}&post_type=product"
   },
   "Play-In": {
-   "diag": "1 page(s) lue(s), 37 liens",
+   "diag": "1 page(s) lue(s), 36 liens",
    "methode": "html",
    "modele": "/recherche?controller=search&s={q}"
   },
